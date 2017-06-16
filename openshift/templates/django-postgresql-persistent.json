@@ -2,11 +2,11 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "django-psql-persistent",
+    "name": "django-psql-trident",
     "annotations": {
       "openshift.io/display-name": "Django + PostgreSQL (Persistent)",
-      "description": "An example Django application with a PostgreSQL database. For more information about using this template, including OpenShift considerations, see https://github.com/openshift/django-ex/blob/master/README.md.",
-      "tags": "quickstart,python,django",
+      "description": "An example Django application with a PostgreSQL database. This application is a fork of https://github.com/openshift/django-ex/blob/master/README.md. More info can be found at https://github.com/n1x0n/django-ex/blob/master/README.md",
+      "tags": "quickstart,python,django,trident",
       "iconClass": "icon-python",
       "template.openshift.io/long-description": "This template defines resources needed to develop a Django based application, including a build configuration, application deployment configuration, and database deployment configuration.",
       "template.openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -14,9 +14,9 @@
       "template.openshift.io/support-url": "https://access.redhat.com"
     }
   },
-  "message": "The following service(s) have been created in your project: ${NAME}, ${DATABASE_SERVICE_NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/openshift/django-ex/blob/master/README.md.",
+  "message": "The following service(s) have been created in your project: ${NAME}, ${DATABASE_SERVICE_NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/n1x0n/django-ex/blob/master/README.md.",
   "labels": {
-    "template": "django-psql-persistent"
+    "template": "django-psql-trident"
   },
   "objects": [
     {
@@ -159,7 +159,7 @@
             "imageChangeParams": {
               "automatic": true,
               "containerNames": [
-                "django-psql-persistent"
+                "django-psql-trident"
               ],
               "from": {
                 "kind": "ImageStreamTag",
@@ -185,7 +185,7 @@
           "spec": {
             "containers": [
               {
-                "name": "django-psql-persistent",
+                "name": "django-psql-trident",
                 "image": " ",
                 "ports": [
                   {
@@ -268,7 +268,14 @@
       "kind": "PersistentVolumeClaim",
       "apiVersion": "v1",
       "metadata": {
-        "name": "${DATABASE_SERVICE_NAME}"
+        "name": "${DATABASE_SERVICE_NAME}",
+        "annotations": {
+            "volume.beta.kubernetes.io/storage-class": "gold",
+            "trident.netapp.io/reclaimPolicy": "Delete",
+            "trident.netapp.io/protocol": "file",
+            "trident.netapp.io/snapshotDirectory": "false",
+            "trident.netapp.io/unixPermissions": "---rwxrwxrwx"
+        }
       },
       "spec": {
         "accessModes": [
@@ -426,7 +433,7 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "django-psql-persistent"
+      "value": "django-psql-trident"
     },
     {
       "name": "NAMESPACE",
@@ -461,7 +468,7 @@
       "displayName": "Git Repository URL",
       "required": true,
       "description": "The URL of the repository with your application source code.",
-      "value": "https://github.com/openshift/django-ex.git"
+      "value": "https://github.com/n1x0n/django-ex.git"
     },
     {
       "name": "SOURCE_REPOSITORY_REF",
