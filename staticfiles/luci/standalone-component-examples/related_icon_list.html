@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <div class="n-related n-related-icon-list">
+    <h3 class="n-related__header">Recommendations</h3>
+    <ul class="n-link-list">
+      <li class="n-related__list-item">
+        <a href="#"> ETC$ and C$ empty Message contains an... </a>
+        <svg class="n-icon-circle-exclamation n-related__list-item-icon n-related__icon-danger" aria-labelledby="title">
+          <title>circle-exclamation</title>
+          <use xlink:href="../svg/sprite.svg#circle-exclamation"></use>
+        </svg>
+      </li>
+      <li class="n-related__list-item">
+        <a href="#"> OnCommand 6.x : Snapshot table empty in... </a>
+        <svg class="n-icon-circle-check-alt n-related__list-item-icon n-related__icon-green" aria-labelledby="title">
+          <title>circle-check-alt</title>
+          <use xlink:href="../svg/sprite.svg#circle-check-alt"></use>
+        </svg>
+      </li>
+      <li class="n-related__list-item">
+        <a href="#"> vserver.comment in cm_storage empty?... </a>
+        <svg class="n-icon-camera n-related__list-item-icon n-related__icon" aria-labelledby="title">
+          <title>camera</title>
+          <use xlink:href="../svg/sprite.svg#camera"></use>
+        </svg>
+      </li>
+      <li class="n-related__list-item">
+        <a href="#"> Problem with SFR : mounted backup is... </a>
+        <svg class="n-icon-paperclip n-related__list-item-icon n-related__icon" aria-labelledby="title">
+          <title>paperclip</title>
+          <use xlink:href="../svg/sprite.svg#paperclip"></use>
+        </svg>
+      </li>
+      <li class="n-related__list-item">
+        <a href="#"> OnCommand 6.x : Snapshot table empty in... </a>
+        <svg class="n-icon-subscribe n-related__list-item-icon" aria-labelledby="title">
+          <title>subscribe</title>
+          <use xlink:href="../svg/sprite.svg#subscribe"></use>
+        </svg>
+      </li>
+    </ul>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <div class="n-content-actions n-content-actions--v1">
+    <ul class="n-content-actions__list">
+      <li class="n-content-actions__list-item">
+        <a href="#" class="n-content-actions__link">
+          <svg class="n-icon-subscribe n-content-actions__icon" aria-labelledby="title">
+            <title>subscribe</title>
+            <use xlink:href="../svg/sprite.svg#subscribe"></use>
+          </svg>
+          <span class="n-content-actions__text">Subscribe</span>
+        </a>
+      </li>
+      <li class="n-content-actions__list-item">
+        <a href="#" class="n-content-actions__link">
+          <svg class="n-icon-print n-content-actions__icon" aria-labelledby="title">
+            <title>print</title>
+            <use xlink:href="../svg/sprite.svg#print"></use>
+          </svg>
+          <span class="n-content-actions__text">Print</span>
+        </a>
+      </li>
+      <li class="n-content-actions__list-item">
+        <a href="#" class="n-content-actions__link">
+          <svg class="n-icon-envelope-o n-content-actions__icon" aria-labelledby="title">
+            <title>envelope-o</title>
+            <use xlink:href="../svg/sprite.svg#envelope-o"></use>
+          </svg>
+          <span class="n-content-actions__text">Email</span>
+        </a>
+      </li>
+      <li class="n-content-actions__list-item">
+        <span class="n-content-actions__link">
+          <svg class="n-icon-translate n-content-actions__icon" aria-labelledby="title">
+            <title>translate</title>
+            <use xlink:href="../svg/sprite.svg#translate"></use>
+          </svg>
+          <div class="n-dropdown-menu n-content-actions__translate-menu">
+            <a href="#" class="n-dropdown-menu__trigger">
+              <span class="n-dropdown-menu__trigger-text">Translate</span>
+              <svg class="n-icon-chevron-down n-dropdown-menu__trigger-icon" aria-labelledby="title">
+                <title>chevron-down</title>
+                <use xlink:href="../svg/sprite.svg#chevron-down"></use>
+              </svg>
+            </a>
+            <div class="n-dropdown-menu__menu">
+              <ul class="n-dropdown-menu__list">
+                <li class="n-dropdown-menu__list-item">
+                  <a href="#" class="n-dropdown-menu__link">Deutsch</a>
+                </li>
+                <li class="n-dropdown-menu__list-item">
+                  <a href="#" class="n-dropdown-menu__link">English</a>
+                </li>
+                <li class="n-dropdown-menu__list-item">
+                  <a href="#" class="n-dropdown-menu__link">Français</a>
+                </li>
+                <li class="n-dropdown-menu__list-item">
+                  <a href="#" class="n-dropdown-menu__link">中国</a>
+                </li>
+                <li class="n-dropdown-menu__list-item">
+                  <a href="#" class="n-dropdown-menu__link">日本語</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </span>
+      </li>
+    </ul>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,576 @@
+$color-input-bg: $color-white;
+$color-input-bg-error: $color-danger-light;
+$color-input-bg-disabled: $color-gray-95;
+$color-input-border: #A6A8AB;
+$color-input-border-error: $color-danger;
+$color-input-border-focus: $color-black;
+$color-input-text-error: $color-danger;
+$color-input-text: $color-text-default;
+$color-label-text: $color-text-light;
+$color-checkbox-radio-label: $color-text-light;
+$color-select-text: $color-text-light;
+$color-placeholder-text: #A6A8AB;
+$color-fieldset-border: #D0D2D3;
+
+$input-border-radius: $border-radius-sm;
+$input-border-thickness: 1px;
+$input-border-thickness-error: 1px;
+
+$spacing-between-fields: $spacing-default;
+$spacing-below-input: $spacing-xs;
+$spacing-checkbox-radio-group: $spacing-xs;
+$spacing-input-padding: $spacing-sm;
+
+$font-size-input-text: $font-size-default;
+
+
+@function input-border() {
+  @return solid $input-border-thickness $color-input-border;
+}
+
+@function input-border-error() {
+  @return solid $input-border-thickness-error $color-input-border-error;
+}
+
+@function input-border-focus() {
+  @return solid $input-border-thickness $color-input-border-focus;
+}
+
+.n-form {
+  padding: $spacing-default 0;
+}
+
+.n-form__input,
+.n-form__textarea {
+  &::placeholder {
+    color: $color-placeholder-text;
+    opacity: 1;
+  }
+}
+
+.n-form__input {
+  @extend %no-margin;
+  @include gotham-narrow;
+  appearance: none;
+  background: $color-input-bg;
+  border: input-border();
+  border-radius: $input-border-radius;
+  color: $color-input-text;
+  display: block;
+  font-size: $font-size-input-text;
+  height: 49px;
+  margin-bottom: $spacing-below-input;
+  max-width: 530px;
+  padding: $spacing-input-padding;
+  width: 100%;
+
+  &:disabled {
+    background: $color-input-bg-disabled;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+
+  .n-form--dark-bg & {
+    border-color: $color-input-bg;
+  }
+
+  &:focus {
+    border: input-border-focus();
+    outline: none;
+  }
+}
+
+.n-form__textarea {
+  @include gotham-narrow;
+  appearance: none;
+  background: $color-input-bg;
+  border: input-border();
+  border-radius: $input-border-radius;
+  color: $color-input-text;
+  display: block;
+  font-size: $font-size-input-text;
+  margin-bottom: $spacing-below-input;
+  max-width: 530px;
+  min-height: 280px;
+  padding: $spacing-input-padding;
+  width: 100%;
+
+  &:disabled {
+    background: $color-input-bg-disabled;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+
+  .n-form--dark-bg & {
+    border-color: $color-input-bg;
+  }
+
+  &:focus {
+    border: input-border-focus();
+    outline: none;
+  }
+}
+
+.n-form__input--error,
+.n-form--dark-bg .n-form__input--error {
+  background: $color-input-bg-error;
+  border: input-border-error();
+}
+
+.n-form__field-group {
+  display: block;
+  margin-bottom: $spacing-between-fields;
+}
+
+.n-form__label {
+  @include gotham-book;
+  color: $color-label-text;
+  display: block;
+  font-size: $font-size-xs;
+  margin-bottom: $spacing-xs;
+  text-transform: uppercase;
+
+  .n-form--dark-bg & {
+    color: $color-white;
+  }
+}
+
+.n-form__label--required:after {
+  color: $color-input-text-error;
+  content: '\A0*';
+}
+
+.n-form__microcopy {
+  color: $color-text-light;
+  font-size: $font-size-xs;
+
+  .n-form--dark-bg & {
+    color: $color-white;
+  }
+
+  .n-form__label + & {
+    display: block;
+    margin-bottom: $spacing-sm;
+    margin-top: -5px;
+  }
+}
+
+.n-form__field-error {
+  color: $color-input-text-error;
+  font-size: $font-size-xs;
+
+  .n-form--dark-bg & {
+    color: $color-input-bg-error;
+  }
+}
+
+.n-form__required-field-legend {
+  color: $color-text-light;
+  display: inline-block;
+  font-size: $font-size-xs;
+
+  &:before {
+    color: $color-input-text-error;
+    content: '*\A0';
+  }
+
+  .n-form--dark-bg & {
+    color: $color-white;
+  }
+}
+
+.n-form__checkbox,
+.n-form__radio-button {
+  @include clearfix;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: $spacing-below-input;
+  position: relative;
+
+  &:hover {
+    .n-form__checkbox-text,
+    .n-form__radio-button-text {
+      color: $color-link-hover;
+    }
+
+    .n-form__checkbox-input:disabled ~,
+    .n-form__radio-button-input:disabled ~ {
+      .n-form__checkbox-text,
+      .n-form__radio-button-text {
+        color: $color-text-light;
+      }
+    }
+  }
+
+  .n-form--dark-bg &:hover {
+    .n-form__checkbox-text,
+    .n-form__radio-button-text {
+      color: $color-gray-87;
+    }
+
+    .n-form__checkbox-input:disabled ~,
+    .n-form__radio-button-input:disabled ~ {
+      .n-form__checkbox-text,
+      .n-form__radio-button-text {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.n-form__checkbox-input,
+.n-form__radio-button-input {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.n-form__checkbox-visual,
+.n-form__radio-button-visual {
+  background: $color-input-bg;
+  border: input-border();
+  border-radius: 5px;
+  cursor: pointer;
+  // display: inline-block;
+  // float: left;
+  height: 24px;
+  left: 0;
+  margin-right: $spacing-sm;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  // vertical-align: middle;
+  width: 24px;
+
+  .n-form--dark-bg & {
+    border: 0;
+  }
+
+  .n-form__checkbox-input:checked + & {
+    .n-form__checkbox-checked-icon {
+      display: inline;
+    }
+  }
+
+  .n-form__checkbox-input:focus + &, {
+    border-color: $color-input-border-focus;
+  }
+
+  .n-form__input-error & {
+    background: $color-input-bg-error;
+    border: input-border-error();
+  }
+
+  .n-form__checkbox-input:disabled + & {
+    cursor: not-allowed;
+  }
+}
+
+.n-form__radio-button-visual {
+  border-radius: 50%;
+  margin-right: $spacing-xs;
+
+  .n-form__radio-button-input:checked + & {
+    &:before {
+      background: $color-blue-light;
+      border: solid 3px $color-white;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+
+  .n-form__radio-button-input:focus + & {
+    border-color: $color-input-border-focus;
+  }
+
+  .n-form__input-error .n-form__radio-button-input:checked + &:before {
+    border-color: $color-input-bg-error;
+  }
+}
+
+
+.n-form__checkbox-text,
+.n-form__radio-button-text {
+  color: $color-checkbox-radio-label;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-input-text;
+  min-height: 24px;
+  padding-left: 34px;
+  position: relative;
+  top: 3px;
+  // vertical-align: middle;
+
+  .n-form--dark-bg & {
+    color: $color-white;
+  }
+
+  .n-form__checkbox-input:disabled ~ & {
+    cursor: not-allowed;
+  }
+}
+
+.n-form__checkbox-checked-icon {
+  display: none;
+  fill: $color-blue-light;
+  height: 20px;
+  width: 20px;
+}
+
+.n-form__select {
+  background: none;
+  border: 0;
+  height: 49px;
+  margin-bottom: $spacing-below-input;
+  max-width: 530px;
+  position: relative;
+  width: 100%;
+
+  &.n-form__input--error {
+    background: none;
+    border: 0;
+  }
+}
+
+.n-form__select-input {
+  @include gotham-narrow-light;
+  appearance: none;
+  background: none;
+  border: 0;
+  color: $color-select-text;
+  cursor: pointer;
+  font-size: $font-size-input-text;
+  height: 100%;
+  padding: $spacing-xs 50px $spacing-xs $spacing-sm;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  .ie9 & {
+    padding-right: $spacing-sm;
+  }
+
+  &:focus {
+    // border: input-border-focus();
+    outline: none;
+  }
+
+  &:disabled {
+    color: $color-gray-64;
+    cursor: not-allowed;
+  }
+}
+
+.n-form__select-visual-wrap {
+  background: $color-input-bg;
+  // background: hotpink;
+  border: input-border();
+  border-radius: $input-border-radius;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+
+  .n-form--dark-bg & {
+    border-color: $color-input-bg;
+  }
+
+  .n-form__input--error & {
+    background: $color-input-bg-error;
+    border: input-border-error();
+  }
+
+  .n-form__select-input:focus ~ & {
+    border: input-border-focus();
+  }
+
+  .n-form__select-input:disabled ~ & {
+    background: $color-input-bg-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.n-form__select-open-indicator {
+  background: $color-blue-light;
+  border: solid 1px $color-blue-light;
+  border-radius: 0 $input-border-radius $input-border-radius 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 49px;
+  position: absolute;
+  right: -1px;
+  text-align: center;
+  top: 0;
+  width: 52px;
+  z-index: 5;
+
+  .n-form--dark-bg & {
+    background: $color-gray-95;
+    border-color: $color-gray-95;
+  }
+
+  .n-form__select:hover & {
+    background: $color-blue-dark;
+  }
+
+  .n-form--dark-bg .n-form__select:hover & {
+    background: $color-gray-87;
+    border-color: $color-gray-87;
+  }
+
+  .n-form--dark-bg .n-form__select.n-form__input--error:hover & {
+    border: input-border-error();
+  }
+
+  .ie9 & {
+    display: none;
+  }
+
+  .n-form__input--error & {
+    border: input-border-error();
+  }
+
+  .n-form--dark-bg .n-form__select-input:focus ~ &,
+  .n-form__select-input:focus ~ & {
+    border: input-border-focus();
+  }
+
+  .n-form__select-input:disabled ~ &,
+  .n-form__select:hover .n-form__select-input:disabled ~ & {
+    background: $color-blue-faded;
+    border-color: $color-blue-faded;
+    cursor: not-allowed;
+  }
+
+  .n-form--dark-bg .n-form__select-input:disabled ~ &,
+  .n-form--dark-bg .n-form__select:hover .n-form__select-input:disabled ~ & {
+    background: $color-input-bg-disabled;
+    border-color: $color-gray-97;
+
+    .n-form__select-open-icon {
+      fill: $color-blue-faded;
+    }
+  }
+}
+
+.n-form__select-open-icon {
+  cursor: pointer;
+  display: inline;
+  fill: $color-white;
+  height: 18px;
+  left: 17px;
+  position: absolute;
+  top: 15.5px;
+  width: 18px;
+
+  .n-form--dark-bg & {
+    fill: $color-blue-light;
+  }
+}
+
+.n-form__checkbox-group {
+  .n-form__checkbox {
+    display: block;
+    margin-bottom: $spacing-checkbox-radio-group;
+  }
+
+  &.n-form__checkbox-group--horizontal {
+    .n-form__checkbox {
+      display: inline-block;
+      margin-right: $spacing-default;
+      vertical-align: middle;
+    }
+  }
+}
+
+.n-form__checkbox-group--scrollable {
+  border: solid 1px $color-input-border;
+  border-radius: 3px;
+  max-height: 180px;
+  max-width: 530px;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  padding: $spacing-xs;
+}
+
+.n-form__checkbox-group--scrollable-parent {
+  left: 8px;
+  position: relative;
+}
+
+.n-form__radio-button-group {
+  .n-form__radio-button {
+    display: block;
+    margin-bottom: $spacing-checkbox-radio-group;
+  }
+
+  &.n-form__radio-button-group--horizontal {
+    .n-form__radio-button {
+      display: inline-block;
+      margin-right: $spacing-default;
+      vertical-align: middle;
+    }
+  }
+}
+
+.n-form__fieldset {
+  border: solid 1px $color-fieldset-border;
+  border-radius: 3px;
+  margin-bottom: $spacing-default;
+  padding: $spacing-default;
+
+  .n-form--dark-bg & {
+    border-color: $color-white;
+  }
+}
+
+.n-form__legend {
+  color: $color-label-text;
+  font-size: $font-size-h4;
+
+  .n-form--dark-bg & {
+    color: $color-white;
+  }
+}
+
+.n-form--dark-bg {
+  h2 {
+    color: $color-white;
+  }
+}
+
+.n-form__microcopy--date-input-status-icon {
+  display: none;
+  height: $font-size-sm;
+  position: relative;
+  top: 2px;
+  width: $font-size-sm;
+
+  &.n-icon-circle-check-alt {
+    fill: $color-success;
+  } 
+
+  &.n-icon-circle-exclamation {
+    fill: $color-danger;
+  }
+
+  .n-form__microcopy--date-input-error &.n-icon-circle-exclamation {
+    display: inline;
+  }
+
+  .n-form__microcopy--date-input-valid &.n-icon-circle-check-alt {
+    display: inline;
+  }
+}

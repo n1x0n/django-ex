@@ -1,0 +1,47 @@
+.n-tag {
+  background: $color-blue-light;
+  border-radius: $border-radius-default;
+  color: $color-white;
+  display: inline-block;
+  font-size: 10px;
+  padding: 4px 13px;
+}
+
+.n-tag--secondary {
+  background: $color-gray-52;
+}
+
+.n-tag__delete-icon {
+  cursor: pointer;
+  display: inline-block;
+  fill: $color-white;
+  height: 9px;
+  vertical-align: middle;
+  width: 9px;
+}
+
+.n-tag__text {
+  display: inline-block;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+.n-tag-group {
+  display: inline-block;
+  font-size: 0;
+  margin-bottom: $spacing-sm;
+
+  .n-tag {
+    margin-right: $spacing-xs;
+    vertical-align: middle;
+  }
+}
+
+.n-tag-group__separator {
+  border-right: solid 1px $color-gray-64;
+  display: inline-block;
+  height: 20px;
+  margin-right: $spacing-xs;
+  vertical-align: middle;
+  width: 1px;
+}

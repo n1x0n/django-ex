@@ -1,0 +1,78 @@
+.n-contact-sales {
+  margin-bottom: $spacing-component-bottom - $spacing-sm; // Items Wrapping Inline
+}
+
+.n-contact-sales__list {
+  @extend %no-margin;
+  @extend %no-padding;
+  font-size: 0;
+  list-style: none;
+}
+
+
+.n-contact-sales__list-item {
+  border-right: 1px solid $color-gray-64;
+  display: inline-block;
+  margin-bottom: $spacing-sm;  // Items Wrapping Inline
+  vertical-align: middle;
+
+  &:last-child {
+    border-right: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.n-contact-sales__link {
+  display: block;
+  padding: 0 $spacing-sm;
+
+  .n-contact-sales__list-item:first-child & {
+    padding-left: 0;
+  }
+
+  .n-contact-sales__list-item:last-child & {
+    padding-right: 0;
+  }
+
+  .n-contact-sales__list-item-with-icon & {
+    padding-left: 45px;
+    position: relative;
+  }
+
+  .n-contact-sales__list-item-with-icon:first-child & {
+    padding-left: 30px;
+
+    .n-contact-sales__icon {
+      left: 0;
+    }
+  }
+}
+
+.n-contact-sales__icon {
+  display: inline;
+  fill: $color-gray-64;
+  height: 24px;
+  left: $spacing-sm;
+  margin-right: $spacing-xs;
+  position: absolute;
+  top: -3px;
+  vertical-align: middle;
+  width: 24px;
+
+  .n-contact-sales__link:hover & {
+    fill: $color-link-hover;
+  }
+}
+
+.n-contact-sales__list-item-text {
+//  display: inline-block;
+  font-size: $font-size-default;
+//  vertical-align: middle;
+  
+  .n-contact-sales__link:hover & {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,129 @@
+$color-module-bg: $color-white;
+$color-module-title: $color-text-default;
+$color-module-title--v3: #4C4C4C;
+$color-module-subtitle: #959595;
+$spacing-feature-block: 25px;
+
+.n-feature-block {
+  background: $color-module-bg;
+  padding: $spacing-feature-block;
+  position: relative;
+}
+
+.n-feature-block__title {
+  @include font-size(24px);
+  margin-bottom: $spacing-default;
+
+  .n-feature-block--nested & {
+    color: rgba($color-module-title--v3, .8);
+  }
+}
+
+.n-feature-block__text {
+  @include gotham-light;
+  margin-bottom: $spacing-default;
+}
+
+.n-feature-block__subtitle {
+  @include font-size(14px);
+  @include gotham-narrow-bold;
+  color: $color-module-subtitle;
+  margin-bottom: $spacing-default;
+  text-transform: uppercase;
+}
+
+.n-feature-block__captioned-image {
+  display: table;
+  margin-bottom: $spacing-sm;
+}
+
+.n-feature-block__caption,
+.n-feature-block__image-wrap {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.n-feature-block__form-button {
+  margin-top: $spacing-default;
+}
+
+.n-feature-block__caption {
+  padding-right: $spacing-default;
+}
+
+.n-feature-block__image-wrap {
+  max-width: 135px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.n-feature-block__aside-link {
+  bottom: $spacing-feature-block;
+  font-size: $font-size-sm;
+  position: absolute;
+  right: $spacing-feature-block;
+}
+
+.n-feature-block--subscribe {
+  background: $color-blue;
+
+  .n-feature-block__aside-link,
+  .n-feature-block__title,
+  .n-feature-block__caption {
+    color: $color-white;
+  }
+}
+
+// The component formerly known as Feature List - needs to be migrated to Feature Block - Striped
+.n-feature-block--striped {
+  margin-bottom: $spacing-default;
+  padding: 0;
+}
+
+.n-feature-block__list {
+  @include list-reset;
+}
+
+.n-feature-block__heading {
+  background: $color-gray-95;
+  font-size: $font-size-h3;
+  padding: $spacing-sm $spacing-default;
+}
+
+.n-feature-block__item {
+  background: $color-gray-87;
+  font-size: $font-size-sm;
+  line-height: $font-size-lg;
+  padding: $spacing-sm $spacing-default;
+
+  &:nth-child(even) {
+    background: $color-gray-95;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  $spacing-feature-block: 50px;
+
+  .n-feature-block {
+    padding: $spacing-feature-block;
+
+    .n-layout-4 & {
+      padding: 30px;
+    }
+  }
+
+  .n-feature-block__aside-link {
+    bottom: $spacing-feature-block;
+    right: $spacing-feature-block;
+  
+    .n-layout-4 & {
+      bottom: 30px;
+      right: 30px;
+    }
+  }
+
+}
+
+

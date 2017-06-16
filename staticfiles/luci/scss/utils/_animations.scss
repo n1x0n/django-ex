@@ -1,0 +1,48 @@
+@keyframes bounceDown {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(.215, .610, .355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(.755, .050, .855, .060);
+    transform: translate3d(0, 6px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(.755, .050, .855, .060);
+    transform: translate3d(0, 3px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(.215, .610, .355, 1);
+  }
+
+  from {
+    // opacity: 0;
+    transform: translate3d(6px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(6px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}

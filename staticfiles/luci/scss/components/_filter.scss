@@ -1,0 +1,150 @@
+.n-filter {
+  font-size: 0;
+  margin-bottom: $spacing-component-bottom;
+
+  &.n-filter--is-narrow {
+    display: inline-block;
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+.n-filter__section {
+  // margin-bottom: $spacing-default;
+  .n-filter--is-narrow & {
+    display: block;
+  }
+}
+
+.n-filter__list {
+  @extend %no-margin;
+  @extend %no-padding;
+  list-style: none;
+  // margin-bottom: $spacing-default;
+}
+
+.n-filter__list-item {
+  font-size: $font-size-default;
+
+  .n-filter__list {
+    padding-left: $spacing-default;
+  }
+}
+
+.n-filter__link {
+  display: inline-block;
+  margin-right: $spacing-xs;
+  padding: $spacing-sm 0;
+}
+
+.n-filter__section-header {
+  border-bottom: solid 1px $color-gray-87;
+  color: $color-text-default;
+  display: block;
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-xs;
+  padding-bottom: $spacing-xs;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    color: $color-text-default;
+    text-decoration: none;
+  }
+
+  .n-filter--is-narrow & {
+    border-bottom: 0;
+    color: $color-link;
+
+    &:hover {
+      color: $color-link-hover;
+      cursor: pointer;
+    }
+  }
+}
+
+.n-filter__icon {
+  display: inline-block;
+  fill: $color-link;
+  height: $font-size-default;
+  margin-right: $spacing-xs;
+  position: relative;
+  top: 1px;
+  width: $font-size-default;
+
+  .n-filter__link:hover & {
+    fill: $color-link-hover;
+  }
+}
+
+.n-filter__label.n-form__label {
+  display: none;
+
+  .n-filter--is-narrow & {
+    display: block;
+  }
+}
+
+.n-filter__open-icon {
+  display: none;
+  fill: $color-link;
+  height: 14px;
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 14px;
+
+  .n-filter__section-header:hover & {
+    fill: $color-link-hover;
+  }
+
+  .n-filter__section--open & {
+    transform: rotate(180deg);
+  }
+
+  .n-filter--is-narrow & {
+    display: inline-block;
+  }
+}
+
+.n-filter--is-narrow .n-filter__column {
+  display: none;
+
+}
+
+.n-filter--is-narrow .n-filter__section--open .n-filter__column {
+  display: block;
+}
+
+@media screen and (min-width: $screen-sm) {
+  .n-filter,
+  .n-filter.n-filter--is-narrow {
+    display: block;
+  }
+
+  .n-filter {
+    display: table;
+    width: 100%;
+  }
+
+  .n-filter__section {
+    display: table-cell;
+    vertical-align: top;
+    width: 320px;
+
+    &:last-child {
+      width: auto;
+    }
+
+    .n-filter--is-narrow & {
+      width: auto;
+    }
+  }
+
+  .n-filter__column {
+    display: inline-block;
+    min-width: 320px;
+    vertical-align: top;
+  }
+}

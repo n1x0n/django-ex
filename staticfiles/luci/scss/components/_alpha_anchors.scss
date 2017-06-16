@@ -1,0 +1,30 @@
+.n-alpha-anchors {
+  background: $color-gray-97;
+  margin-bottom: $spacing-component-bottom;
+  // text-align: center;
+  width: 100%;
+}
+
+.n-alpha-anchors__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.n-alpha-anchors__list-item {
+  display: inline-block;
+  flex: 1 0 3em;
+  // width: 3em;
+
+  &.n-alpha-anchors__list-item--empty {
+    height: 0;
+  }
+}
+
+.n-alpha-anchors__link {
+  display: block;
+  font-size: $font-size-default;
+  padding: $spacing-sm;
+  text-align: center;
+  width: 100%;
+}

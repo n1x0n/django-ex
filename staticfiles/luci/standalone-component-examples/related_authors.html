@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <div class="n-related n-related-authors">
+    <h3 class="n-related__header">Top Kudoed Authors</h3>
+    <ul class="n-link-list">
+      <li class="n-related__list-item">
+        <a class="n-related__author" href="#"> sinhaa <img class="n-related__author-photo" src="../images/author1.png" alt="sinhaa Photograph">
+          <span class="n-related__author-count">52</span>
+        </a>
+      </li>
+      <li class="n-related__list-item">
+        <a class="n-related__author" href="#"> aborzenkov <img class="n-related__author-photo" src="../images/author2.png" alt="aborzenkov Photograph">
+          <span class="n-related__author-count">42</span>
+        </a>
+      </li>
+      <li class="n-related__list-item">
+        <a class="n-related__author" href="#"> ekashpureff <img class="n-related__author-photo" src="../images/author3.png" alt="ekashpureff Photograph">
+          <span class="n-related__author-count">32</span>
+        </a>
+      </li>
+      <li class="n-related__list-item">
+        <a class="n-related__author" href="#"> shatfield <img class="n-related__author-photo" src="../images/author4.png" alt="shatfield Photograph">
+          <span class="n-related__author-count">28</span>
+        </a>
+      </li>
+      <li class="n-related__list-item">
+        <a class="n-related__author" href="#"> hadrian <img class="n-related__author-photo" src="../images/author5.png" alt="hadrian Photograph">
+          <span class="n-related__author-count">20</span>
+        </a>
+      </li>
+    </ul>
+    <a href="#" class="n-related__view-all">View All</a>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

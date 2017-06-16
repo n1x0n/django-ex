@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <div class="n-property-navigation-bar n-property-navigation-bar--v1">
+    <div class="n-property-navigation-bar__inner-wrap">
+      <div class="n-property-navigation-bar__nav">
+        <ul class="n-property-navigation-bar__nav-list">
+          <li class="n-property-navigation-bar__nav-list-item">
+            <a class="n-property-navigation-bar__nav-link " href="#" data-more-menu-id="n-property-navigation-bar__more-menu-item-home">
+              <span class="n-property-navigation-bar__nav-link-text"> Home </span>
+            </a>
+          </li>
+          <li class="n-property-navigation-bar__nav-list-item n-property-navigation-bar__more-item">
+            <a href="#" class="n-property-navigation-bar__nav-link n-property-navigation-bar__more-link" data-menu-id="n-property-navigation-bar__menu--more-menu">
+              <span class="n-property-navigation-bar__nav-link-text n-property-navigation-bar__more-link-text">More</span>
+              <svg class="n-icon-chevron-down n-property-navigation-bar__menu-indicator" aria-labelledby="title">
+                <title>chevron-down</title>
+                <use xlink:href="../svg/sprite.svg#chevron-down"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="n-property-navigation-bar__menus">
+      <div id="n-property-navigation-bar__menu--more-menu" class="n-property-navigation-bar__menu--more-menu n-menu n-menu--v1">
+        <ul class="n-menu__list">
+          <li id="n-property-navigation-bar__more-menu-item-home" class="n-menu__list-item n-menu__list-item--level-1">
+            <a class="n-menu__link" href="#">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

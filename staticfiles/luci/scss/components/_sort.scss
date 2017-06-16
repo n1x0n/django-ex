@@ -1,0 +1,40 @@
+.n-sort {
+  border-bottom: solid 1px $color-gray-87;
+  margin-bottom: $spacing-component-bottom;
+  width: 100%;
+}
+
+
+.n-sort__link {
+  color: $color-text-default;
+  padding-right: $spacing-default;
+}
+
+.n-sort__link-icon {
+  fill: $color-gray-64;
+  height: 14px;
+  width: 14px;
+}
+
+.n-sort__filter-label {
+  margin-right: $spacing-xs;
+}
+
+.n-sort__dropdown-menu {
+  text-align: left;
+}
+
+@media screen and (min-width: $screen-md) {
+  .n-sort {
+    display: table;
+  }
+
+  .n-sort__left,
+  .n-sort__right {
+    display: table-cell;
+  }
+
+  .n-sort__right {
+    text-align: right;
+  }
+}

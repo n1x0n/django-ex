@@ -1,0 +1,33 @@
+$color-module-bg: $color-gray-97;
+$color-module-title: #3B3B3B;
+$color-module-text: #999999;
+$color-border: #E4E4E4;
+$color-border-hover: $color-blue-light;
+
+.n-spotlight-module {
+  border-bottom: 10px solid $color-border;
+
+  &:hover {
+    border-bottom: 10px solid $color-blue-light;
+    cursor: pointer;
+  }
+}
+
+.n-spotlight-module__image {
+  display: block;
+}
+
+.n-spotlight-module__body {
+  background-color: $color-module-bg;
+  padding: 40px;
+  text-align: center;
+}
+
+.n-spotlight-module__title {
+  color: $color-module-title;
+}
+
+.n-spotlight-module__text {
+  @include gotham-narrow;
+  color: $color-module-text;
+}

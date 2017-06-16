@@ -1,0 +1,63 @@
+@mixin gotham-extra-light {
+  font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@mixin gotham-light {
+  font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Need to request this to be added, and update font-family and weight
+@mixin gotham-book {
+  font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin gotham-bold {
+  font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin gotham-narrow-book {
+  font-family: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Need to request this to be added, and update font-family and weight
+@mixin gotham-narrow-bold {
+  font-family: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// The following are unused per new visual guide.
+// leaving these here until removed/replaced appropriately.
+@mixin gotham-black {
+  font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin gotham-medium {
+  font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin gotham-narrow-light {
+  font-family: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin gotham-narrow {
+  font-family: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

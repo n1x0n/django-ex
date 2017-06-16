@@ -1,0 +1,334 @@
+$property-bar-height: 40px;
+
+.n-property-bar {
+  background: $color-gray-97;
+  border-bottom: solid 1px $color-gray-87;
+}
+
+.n-property-bar__inner-wrap {
+  @extend %content-max-width;
+  display: table;
+  height: $property-bar-height;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.n-property-bar__property-mark {
+  display: table-cell;
+  font-size: 0;
+  overflow: hidden;
+  padding-left: $spacing-xs;
+  vertical-align: middle;
+  // white-space: nowrap;
+}
+
+.n-property-bar__property-link {
+  display: inline-block;
+}
+
+.n-property-bar__search {
+  display: none;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.n-property-bar__logo {
+  display: inline-block;
+  height: 18px;
+  position: relative;
+  top: 2px;
+  vertical-align: top;
+  width: 100px;
+
+  .n-property-bar__property-mark--has-property-name & {
+    // display: block;
+    // height: 14px;
+    // margin-bottom: 2px;
+    // top: 0;
+    margin-right: $spacing-xs;
+    padding-right: $spacing-xs;
+    width: auto;
+
+    &:after {
+      background: $color-gray-87;
+      content: '';
+      height: 22px;
+      position: absolute;
+      right: 0;
+      top: -3px;
+      width: 1px;
+    }
+  }
+}
+
+.n-property-bar__netapp-mark-icon {
+  display: none;
+  fill: $color-blue-dark;
+  height: 20px;
+  width: 20px;
+}
+
+.n-property-bar__property-mark--has-property-name {
+  padding-top: $spacing-xs;
+
+  .n-property-bar__netapp-mark-icon {
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    vertical-align: top;
+  }
+
+  .n-property-bar__logo-svg {
+    display: none;
+  }
+}
+
+.n-property-bar__property-name {
+  @include gotham-extra-light;
+  color: $color-blue-light;
+  display: inline-block;
+  font-size: $font-size-sm;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  top: -2px;
+  vertical-align: top;
+}
+
+.n-property-bar__menu-toggle {
+  display: table-cell;
+  height: inherit;
+  width: 50px;
+
+  .n-off-canvas-menu--open & {
+    background: $color-gray-87;
+  }
+}
+
+.n-property-bar__menu-toggle-link {
+  @include full-height-hidden-pseudo-element;
+  color: $color-gray-41;
+  display: block;
+  font-size: $font-size-xs;
+  height: inherit;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.n-property-bar__menu-toggle-text {
+  display: inline-block;
+  text-indent: -10000px;
+  vertical-align: middle;
+}
+
+.n-property-bar__menu-toggle-icon {
+  display: inline-block;
+  fill: $color-gray-27;
+  height: 20px;
+  position: relative;
+  top: 7px;
+  width: 20px;
+}
+
+.n-property-bar__narrow-actions {
+  display: table-cell;
+  height: inherit;
+  list-style: none;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.n-property-bar__narrow-actions-list {
+  @extend %no-margin;
+  @extend %no-padding;
+  font-size: 0;
+  height: inherit;
+}
+
+.n-property-bar__narrow-actions-list-item {
+  display: inline-block;
+  font-size: 0;
+  height: inherit;
+  vertical-align: middle;
+}
+
+.n-property-bar__narrow-actions-link {
+  @include full-height-hidden-pseudo-element;
+  color: $color-gray-41;
+  display: block;
+  font-size: $font-size-xs;
+  height: inherit;
+  padding: 0 $spacing-xs;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.n-property-bar__narrow-actions-link-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.n-property-bar__narrow-actions-search-icon {
+  display: inline-block;
+  fill: $color-gray-41;
+  height: 20px;
+  vertical-align: middle;
+  width: 20px;
+}
+
+.n-property-bar__narrow-action-search-form {
+  background: $color-gray-87;
+  display: none;
+  left: 0;
+  padding: $spacing-xs;
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  width: 100%;
+  z-index: z('menu');
+
+  .n-property-bar--narrow-search-form-visible & {
+    display: block;
+  }
+
+  .n-search-form__input {
+    border-radius: $border-radius-sm;
+    padding-right: 50px;
+    width: 100%;
+  }
+
+  .n-search-form__button {
+    position: absolute;
+    right: $spacing-xs;
+    top: $spacing-xs;
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  $property-bar-height: auto;
+
+  .n-property-bar__logo:after {
+    display: none;
+  }
+
+  .n-property-bar .n-property-bar__property-name {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .n-property-bar__property-mark--has-property-name {
+    .n-property-bar__netapp-mark-icon {
+      display: none;
+    }
+
+    .n-property-bar__logo {
+      display: block;
+      padding-right: 0;
+      position: relative;
+      top: -2px;
+      vertical-align: middle;
+    }
+
+    .n-property-bar__logo-svg {
+      display: inline-block;
+    }
+  }
+
+  .n-property-bar {
+    border-bottom: 0;
+    height: $property-bar-height;
+
+  }
+
+  .n-property-bar__inner-wrap {
+    height: $property-bar-height;
+
+    .n-property-bar--v1 & {
+      // Add padding to the top of v1 since there's no property name
+      // padding-top: $spacing-sm;
+      padding: 24px 0;
+    }
+  }
+
+  .n-property-bar__narrow-actions,
+  .n-property-bar__menu-toggle {
+    display: none;
+  }
+
+  .n-property-bar__property-mark {
+    padding-left: $spacing-sm;
+  }
+
+
+  .n-property-bar__logo,
+  .n-property-bar__property-mark--has-property-name .n-property-bar__logo {
+    height: 29px;
+    width: 160px;
+  }
+
+  .n-property-bar__property-name {
+    font-size: $font-size-xl;
+  }
+
+  .n-property-bar__search {
+    display: table-cell;
+    padding-right: $spacing-sm;
+    vertical-align: middle;
+  }
+
+  .n-property-bar--narrow-search-form-visible .n-property-bar__narrow-action-search-form {
+    display: none;
+  }
+
+  .n-property-bar--v3,
+  .n-property-bar--v6 {
+    .n-property-bar {
+      padding-top: $spacing-sm;
+    }
+
+    .n-property-bar__property-mark--has-property-name {
+      vertical-align: middle;
+
+      .n-property-bar__logo {
+        display: inline-block;
+        margin-right: $spacing-sm;
+      }
+    }
+
+    .n-property-bar__property-name {
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .n-property-bar__inner-wrap,
+  .n-property-bar--v1 .n-property-bar__inner-wrap {
+    // padding-top: $spacing-sm * 2;
+    padding-top: 24px;
+  }
+
+  .n-property-bar__property-mark--has-property-name {
+    padding-top: 0;
+    vertical-align: middle;
+
+    .n-property-bar__logo {
+      display: inline-block;
+      margin-right: $spacing-sm;
+    }
+  }
+
+  .n-property-bar__property-name {
+    position: relative;
+    top: -2px;
+  }
+}

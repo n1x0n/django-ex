@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <div class="n-off-canvas-menu">
+    <div class="n-off-canvas-menu__menu">
+      <div class="n-off-canvas-menu__menu-inner">
+        <div class="n-off-canvas-menu__property-title">NetApp.com</div>
+        <ul class="n-off-canvas-menu__property-navigation-list">
+          <li class="n-off-canvas-menu__property-navigation-list-item">
+            <a href="#" class="n-property-navigation-bar__utils-link n-property-navigation-bar__utils-link--off-canvas">
+              <span>Sign In </span>
+            </a>
+          </li>
+          <li class="n-off-canvas-menu__property-navigation-list-item">
+            <a href="#" class="n-property-navigation-bar__utils-link n-property-navigation-bar__utils-link--off-canvas">
+              <span>Register </span>
+            </a>
+          </li>
+        </ul>
+        <ul class="n-off-canvas-menu__utils-list">
+          <li class="n-off-canvas_menu__utils-list-item">
+            <a href="#" class="n-off-canvas-menu__utils-link n-off-canvas-menu__utils-image-link">
+              <svg class="n-icon-globe n-globe__icon n-globe__icon--off-canvas" aria-labelledby="title">
+                <title>globe</title>
+                <use xlink:href="../svg/sprite.svg#globe"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <ul class="n-off-canvas-menu__global-navigation-list">
+          <li class="n-off-canvas-menu__global-navigation-list-header">More From NetApp</li>
+          <li class="n-off-canvas-menu__global-navigation-list-item">
+            <a href="#" class="n-off-canvas-menu__global-navigation-link">Netapp.com</a>
+          </li>
+          <li class="n-off-canvas-menu__global-navigation-list-item">
+            <a href="#" class="n-off-canvas-menu__global-navigation-link">Support</a>
+          </li>
+          <li class="n-off-canvas-menu__global-navigation-list-item">
+            <a href="#" class="n-off-canvas-menu__global-navigation-link">Community</a>
+          </li>
+          <li class="n-off-canvas-menu__global-navigation-list-item">
+            <a href="#" class="n-off-canvas-menu__global-navigation-link">Training</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="n-off-canvas-menu__content-wrap"> </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

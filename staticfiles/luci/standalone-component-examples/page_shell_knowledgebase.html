@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <header>
+    <div class="n-top-hat">
+      <div class="n-container">
+        <div class="n-top-hat__cross-property-nav">
+          <ul class="n-top-hat__list">
+            <li class="n-top-hat__list-item">
+              <a href="#" class="n-top-hat__link">NetApp.com</a>
+            </li>
+            <li class="n-top-hat__list-item">
+              <a href="#" class="n-top-hat__link">Support</a>
+            </li>
+            <li class="n-top-hat__list-item">
+              <a href="#" class="n-top-hat__link">Community</a>
+            </li>
+            <li class="n-top-hat__list-item">
+              <a href="#" class="n-top-hat__link">Training</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-top-hat__utils">
+          <ul class="n-top-hat__list">
+            <li class="n-top-hat__list-item">
+              <a href="#" class="n-top-hat__link">
+                <span class="n-top-hat__link-text">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="n-property-bar n-property-bar--v2">
+      <div class="n-property-bar__inner-wrap">
+        <div class="n-property-bar__menu-toggle">
+          <a href="#" class="n-property-bar__menu-toggle-link">
+            <span class="n-property-bar__menu-toggle-text">Menu</span>
+            <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+              <title>bars</title>
+              <use xlink:href="../svg/sprite.svg#bars"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="n-property-bar__property-mark n-property-bar__property-mark--has-property-name">
+          <a class="n-property-bar__property-link" href="#">
+            <div class="n-property-bar__logo">
+              <svg class="n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+                <title>netapp-mark</title>
+                <use xlink:href="../svg/sprite.svg#netapp-mark"></use>
+              </svg>
+              <svg viewBox="0 0 1008 181.537" class="n-property-bar__logo-svg" aria-labelledby="title">
+                <title>NetApp</title>
+                <use xlink:href="../svg/sprite.svg#netapp-logo"></use>
+              </svg>
+            </div>
+            <h2 class="n-property-bar__property-name">Knowledgebase</h2>
+          </a>
+        </div>
+        <div class="n-property-bar__search">
+          <form class="n-search-form">
+            <input class="n-search-form__input" type="text" placeholder="Search">
+            <button class="n-search-form__button" type="submit">
+              <svg class="n-icon-search n-search-form__button-icon" aria-labelledby="title">
+                <title>search</title>
+                <use xlink:href="../svg/sprite.svg#search"></use>
+              </svg>
+              <span class="n-search-form__button-text">Search</span>
+            </button>
+          </form>
+        </div>
+        <div class="n-property-bar__narrow-actions">
+          <ul class="n-property-bar__narrow-actions-list">
+            <li class="n-property-bar__narrow-actions-list-item">
+              <a href="#" class="n-property-bar__narrow-actions-link">
+                <span class="n-property-bar__narrow-actions-link-text">Sign In</span>
+              </a>
+            </li>
+            <li class="n-property-bar__narrow-actions-list-item">
+              <a href="#" class="n-property-bar__narrow-actions-link n-property-bar__narrow-search-toggle">
+                <svg class="n-icon-search n-property-bar__narrow-actions-search-icon" aria-labelledby="title">
+                  <title>search</title>
+                  <use xlink:href="../svg/sprite.svg#search"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-property-bar__narrow-action-search-form">
+          <form class="n-search-form">
+            <input class="n-search-form__input" type="text" placeholder="Search">
+            <button class="n-search-form__button" type="submit">
+              <svg class="n-icon-search n-search-form__button-icon" aria-labelledby="title">
+                <title>search</title>
+                <use xlink:href="../svg/sprite.svg#search"></use>
+              </svg>
+              <span class="n-search-form__button-text">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="n-property-navigation-bar n-property-navigation-bar--v1">
+      <div class="n-property-navigation-bar__inner-wrap">
+        <div class="n-property-navigation-bar__nav">
+          <ul class="n-property-navigation-bar__nav-list">
+            <li class="n-property-navigation-bar__nav-list-item">
+              <a class="n-property-navigation-bar__nav-link " href="" data-more-menu-id="n-property-navigation-bar__more-menu-item-home">
+                <span class="n-property-navigation-bar__nav-link-text"> Home </span>
+              </a>
+            </li>
+            <li class="n-property-navigation-bar__nav-list-item">
+              <a class="n-property-navigation-bar__nav-link " href="" data-more-menu-id="n-property-navigation-bar__more-menu-item-break-fix">
+                <span class="n-property-navigation-bar__nav-link-text"> Break Fix </span>
+              </a>
+            </li>
+            <li class="n-property-navigation-bar__nav-list-item">
+              <a class="n-property-navigation-bar__nav-link " href="" data-more-menu-id="n-property-navigation-bar__more-menu-item-how-to">
+                <span class="n-property-navigation-bar__nav-link-text"> How To </span>
+              </a>
+            </li>
+            <li class="n-property-navigation-bar__nav-list-item">
+              <a class="n-property-navigation-bar__nav-link " href="" data-more-menu-id="n-property-navigation-bar__more-menu-item-operations">
+                <span class="n-property-navigation-bar__nav-link-text"> Operations </span>
+              </a>
+            </li>
+            <li class="n-property-navigation-bar__nav-list-item">
+              <a class="n-property-navigation-bar__nav-link " href="" data-more-menu-id="n-property-navigation-bar__more-menu-item-product-security">
+                <span class="n-property-navigation-bar__nav-link-text"> Product Security </span>
+              </a>
+            </li>
+            <li class="n-property-navigation-bar__nav-list-item n-property-navigation-bar__more-item">
+              <a href="#" class="n-property-navigation-bar__nav-link n-property-navigation-bar__more-link" data-menu-id="n-property-navigation-bar__menu--more-menu">
+                <span class="n-property-navigation-bar__nav-link-text n-property-navigation-bar__more-link-text">More</span>
+                <svg class="n-icon-chevron-down n-property-navigation-bar__menu-indicator" aria-labelledby="title">
+                  <title>chevron-down</title>
+                  <use xlink:href="../svg/sprite.svg#chevron-down"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-property-navigation-bar__utils">
+          <ul class="n-property-navigation-bar__utils-list">
+            <li class="n-property-navigation-bar__utils-list-item">
+              <a href="#" class="n-property-navigation-bar__utils-link">
+                <span class="n-property-navigation-bar__utils-link-text n-property-navigation-bar__language-selector-toggle-text">Sign In </span>
+              </a>
+            </li>
+            <li class="n-property-navigation-bar__utils-list-item">
+              <a href="#" class="n-property-navigation-bar__utils-link">
+                <span class="n-property-navigation-bar__utils-link-text n-property-navigation-bar__language-selector-toggle-text">Register </span>
+              </a>
+            </li>
+            <li class="n-property-navigation-bar__utils-list-item">
+              <a href="#" class="n-property-navigation-bar__utils-link n-property-navigation-bar__nav-link n-property-navigation-bar__language-selector-toggle" data-menu-id="n-property-navigation-bar__menu--language-selector">
+                <svg class="n-icon-globe n-globe__icon" aria-labelledby="title">
+                  <title>globe</title>
+                  <use xlink:href="../svg/sprite.svg#globe"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-property-navigation-bar__menus">
+        <div id="n-property-navigation-bar__menu--language-selector" class="n-menu n-menu--v3">
+          <div class="n-language-selector-menu">
+            <div class="n-language-selector-menu__header">
+              <span class="n-language-selector-menu__title">Select Your Language</span>
+            </div>
+            <ul class="n-menu__list">
+              <li class="n-menu__list-column">
+                <ul class="n-menu__list">
+                  <li class="n-menu__list-item n-menu__list-item--level-1">
+                    <a href="/us/" class="n-menu__header-text">English</a href="/us/">
+                    <ul class="n-menu__list">
+                      <li class="n-menu__list-item n-menu__list-item--level-2">
+                        <a class="n-menu__link" href="/au/">Australia</a>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-2">
+                        <a class="n-menu__link" href="/ca/">Canada</a>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-2">
+                        <a class="n-menu__link" href="/il/">Isreal</a>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-2">
+                        <a class="n-menu__link" href="/as/">Southeast Asia</a>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-2">
+                        <a class="n-menu__link" href="/se/">Sweden</a>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-2">
+                        <a class="n-menu__link" href="/uk/">United Kingdom</a>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-2">
+                        <a class="n-menu__link" href="/us/">United States</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="n-menu__list-column">
+                <ul class="n-menu__list">
+                  <li class="n-menu__list-item n-menu__list-item--level-1">
+                    <a href="/cn/" class="n-menu__header-text">中国</a href="/cn/">
+                  </li>
+                  <li class="n-menu__list-item n-menu__list-item--level-1">
+                    <a href="/nl/" class="n-menu__header-text">Nederlands</a>
+                  </li>
+                  <li class="n-menu__list-item n-menu__list-item--level-1">
+                    <a href="/fr/" class="n-menu__header-text">Français</a>
+                  </li>
+                  <li class="n-menu__list-item n-menu__list-item--level-1">
+                    <a href="/de/" class="n-menu__header-text">Deutsche</a>
+                    <ul class="n-menu__list">
+                      <li class="n-menu__list-item n-menu__list-item--level-2">
+                        <a href="/de/" class="n-menu__link">Deutschland</a>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-2">
+                        <a href="/ch/" class="n-menu__link">Schweiz</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="n-menu__list-item n-menu__list-item--level-1">
+                    <a href="/it/" class="n-menu__header-text">Italiano</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="n-menu__list-column">
+                <ul class="n-menu__list">
+                  <li class="n-menu__list-column">
+                    <ul class="n-menu__list">
+                      <li class="n-menu__list-item n-menu__list-item--level-1">
+                        <a href="/jp/" class="n-menu__header-text">日本</a>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-1">
+                        <a href="/kr/" class="n-menu__header-text">한국</a>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-1">
+                        <a href="/ru/" class="n-menu__header-text">русский</a>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-1">
+                        <a href="/es/" class="n-menu__header-text">Español</a>
+                        <ul class="n-menu__list">
+                          <li class="n-menu__list-item n-menu__list-item--level-2">
+                            <a href="/es/" class="n-menu__link">España</a>
+                          </li>
+                          <li class="n-menu__list-item n-menu__list-item--level-2">
+                            <a href="/mx/" class="n-menu__link">América Latina</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="n-menu__list-item n-menu__list-item--level-1">
+                        <a href="/br/" class="n-menu__header-text">Português</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="menu__footer">
+              <p>Find a NetApp office near you.
+                <a href="/us/contact-us/">See our worldwide contact list</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="n-property-navigation-bar__menu--more-menu" class="n-property-navigation-bar__menu--more-menu n-menu n-menu--v1">
+          <ul class="n-menu__list">
+            <li id="n-property-navigation-bar__more-menu-item-home" class="n-menu__list-item n-menu__list-item--level-1">
+              <a class="n-menu__link" href="">Home</a>
+            </li>
+            <li id="n-property-navigation-bar__more-menu-item-break-fix" class="n-menu__list-item n-menu__list-item--level-1">
+              <a class="n-menu__link" href="">Break Fix</a>
+            </li>
+            <li id="n-property-navigation-bar__more-menu-item-how-to" class="n-menu__list-item n-menu__list-item--level-1">
+              <a class="n-menu__link" href="">How To</a>
+            </li>
+            <li id="n-property-navigation-bar__more-menu-item-operations" class="n-menu__list-item n-menu__list-item--level-1">
+              <a class="n-menu__link" href="">Operations</a>
+            </li>
+            <li id="n-property-navigation-bar__more-menu-item-product-security" class="n-menu__list-item n-menu__list-item--level-1">
+              <a class="n-menu__link" href="">Product Security</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main role="main" id="n-main-content" class="n-main-content">
+    <!-- START OF PAGE CONTENT **************************************************************************************-->
+    <div class="n-container" style="background: #D6EDE8; min-height: 400px;">
+      <div class="n-row">
+        <div class="n-column-sm-12">
+          <h1>Page Content Goes Here</h1>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- END OF PAGE CONTENT **************************************************************************************-->
+  <footer class="n-footer n-footer--v2">
+    <div class="n-footer__top">
+      <div class="n-container">
+        <div class="n-footer__property-links">
+          <h4 class="n-footer__property-link-list-header">More in Knowledgebase</h4>
+          <ul class="n-footer__property-link-list">
+            <li class="n-footer__property-link-column">
+              <ul class="n-footer__property-link-column-list">
+                <li class="n-footer__property-link-list-item">
+                  <a href="#" class="n-footer__property-link"> Policies &amp; Definitions </a>
+                </li>
+                <li class="n-footer__property-link-list-item">
+                  <a href="#" class="n-footer__property-link"> Community Help </a>
+                </li>
+              </ul>
+            </li>
+            <li class="n-footer__property-link-column">
+              <ul class="n-footer__property-link-column-list">
+                <li class="n-footer__property-link-list-item">
+                  <a href="#" class="n-footer__property-link"> Report an Issue </a>
+                </li>
+                <li class="n-footer__property-link-list-item">
+                  <a href="#" class="n-footer__property-link"> Provide Feedback </a>
+                </li>
+                <li class="n-footer__property-link-list-item">
+                  <a href="#" class="n-footer__property-link"> Take a Survey </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__corp-links">
+          <ul class="n-footer__corp-link-list">
+            <li class="n-footer__corp-link-list-header">
+              <a href="#" class="n-footer__corp-link">Company</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Our Story</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">News@NetApp</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Events</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Customer Stories</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Investors</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Careers</a>
+            </li>
+          </ul>
+          <ul class="n-footer__corp-link-list">
+            <li class="n-footer__corp-link-list-header">Sales</li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">How To Buy</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Find A Partner</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">US Public Sector Contracts</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">E-Based OEM Partners</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">NetApp Capital Solutions</a>
+            </li>
+          </ul>
+          <ul class="n-footer__corp-link-list">
+            <li class="n-footer__corp-link-list-header">
+              <a href="#" class="n-footer__corp-link">Legal</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Privacy &amp; Cookie Policy</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Copyright</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Trademarks</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Community Terms of Use</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Slavery and Human Trafficking Statement</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Accessibility</a>
+            </li>
+          </ul>
+          <ul class="n-footer__corp-link-list">
+            <li class="n-footer__corp-link-list-header">Resources</li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Subscriptions</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Library</a>
+            </li>
+            <li class="n-footer__corp-link-list-item">
+              <a href="#" class="n-footer__corp-link">Site Map</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="n-footer__bottom">
+      <div class="n-container">
+        <div class="n-footer__bottom-left">
+          <div class="n-footer__copyright"> &copy; 2016 NetApp </div>
+          <div class="n-footer__social-links">
+            <ul class="n-footer__social-link-list">
+              <li class="n-footer__social-link-list-item">
+                <a href="#" class="n-footer__social-link">
+                  <span class="n-footer__social-link-text">NetApp Community</span>
+                  <svg class="n-icon-comments n-footer__social-link-icon" aria-labelledby="title">
+                    <title>comments</title>
+                    <use xlink:href="../svg/sprite.svg#comments"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="n-footer__social-link-list-item">
+                <a href="#" class="n-footer__social-link">
+                  <span class="n-footer__social-link-text">Twitter</span>
+                  <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                    <title>twitter</title>
+                    <use xlink:href="../svg/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="n-footer__social-link-list-item">
+                <a href="#" class="n-footer__social-link">
+                  <span class="n-footer__social-link-text">LinkedIn</span>
+                  <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                    <title>linkedin</title>
+                    <use xlink:href="../svg/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="n-footer__social-link-list-item">
+                <a href="#" class="n-footer__social-link">
+                  <span class="n-footer__social-link-text">Facebook</span>
+                  <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                    <title>facebook</title>
+                    <use xlink:href="../svg/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="n-footer__social-link-list-item">
+                <a href="#" class="n-footer__social-link">
+                  <span class="n-footer__social-link-text">YouTube</span>
+                  <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                    <title>youtube</title>
+                    <use xlink:href="../svg/sprite.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="n-footer__social-link-list-item">
+                <a href="#" class="n-footer__social-link">
+                  <span class="n-footer__social-link-text">Slideshare</span>
+                  <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                    <title>slideshare</title>
+                    <use xlink:href="../svg/sprite.svg#slideshare"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="n-footer__bottom-right">
+          <p class="n-footer__fine-print"> Have feedback for our website?
+            <a href="#">Let us know</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

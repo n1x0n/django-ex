@@ -1,0 +1,54 @@
+$color-breadcrumb: $color-text-light;
+
+.n-breadcrumb {
+  display: none;
+  margin-bottom: 0;  // Items Wrapping Inline, Snug to Page Title
+
+  @media screen and (min-width: $screen-md) {
+    display: block;
+  }
+}
+
+.n-breadcrumb__list {
+  @extend %no-margin;
+  @extend %no-padding;
+  font-size: 0;
+  list-style: none;
+}
+
+.n-breadcrumb__list-item {
+  display: inline-block;
+  margin-bottom: $spacing-sm; // Items Wrapping Inline
+  vertical-align: middle;
+
+  &:last-child > .n-breadcrumb__link {
+    margin-right: 0;
+    padding-right: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.n-breadcrumb__link {
+  @include gotham-narrow-light;
+  color: $color-breadcrumb;
+  display: block;
+  font-size: $font-size-sm;
+  margin-right: $spacing-xs;
+  padding: 0 $spacing-sm 0 0;
+  position: relative;
+
+  &:after {
+    content: '>';
+    position: absolute;
+    right: 0;
+    top: 1px;
+  }
+
+  &:hover {
+    color: $color-breadcrumb;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <section class="n-section-nav" role="group">
+    <article class="n-section-nav__column" role="article">
+      <div class="n-section-nav__thumb">
+        <a href="#" target="_self"><img src="../images/private-cloud-90x150.png" alt="Private Cloud"></a>
+      </div>
+      <div class="n-section-nav__content">
+        <h3 class="n-section-nav__title">
+          <a class="n-section-nav__title--a" href="http://www.netapp.com/us/media/hybrid-cloud-90x150.png" target="_self">Private Cloud</a>
+        </h3>
+        <div class="n-section-nav__summary">
+          <p class="n-section-nav__description">Gain the flexibility of a dynamic private cloud. Choose from a broad ecosystem of NetApp® cloud solutions and partners.</p>
+          <ul class="n-section-nav__link-list">
+            <li class="n-section-nav__link-list-item">
+              <a href="#" title="Private Cloud">Private Cloud Solutions</a>
+            </li>
+            <li class="n-section-nav__link-list-item">
+              <a href="#" title="FlexPod Overview">FlexPod</a>
+            </li>
+            <li class="n-section-nav__link-list-item">
+              <a href="#" title="Solution: NetApp Solutions for Microsoft Cloud">Microsoft Private Cloud</a>
+            </li>
+            <li class="n-section-nav__link-list-item">
+              <a href="#" title="Solution: VMware Cloud Infrastructure and Management on NetApp">VMware Private Cloud</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article class="n-section-nav__column" role="article">
+      <div class="n-section-nav__thumb">
+        <a href="#" target="_self"><img src="../images/hybrid-cloud-90x150.png" alt="Hybrid Cloud"></a>
+      </div>
+      <div class="n-section-nav__content">
+        <h3 class="n-section-nav__title">
+          <a class="n-section-nav__title--a" href="#" target="_self">Hybrid Cloud</a>
+        </h3>
+        <div class="n-section-nav__summary">
+          <p class="n-section-nav__description">Extend to the hybrid cloud on your terms. Leverage the versatility of NetApp clustered Data ONTAP® software to maintain control of your data across your hybrid cloud.</p>
+          <ul class="n-section-nav__link-list">
+            <li class="n-section-nav__link-list-item">
+              <a href="#">AltaVault</a>
+            </li>
+            <li class="n-section-nav__link-list-item">
+              <a href="#" title="Cloud ONTAP">Cloud ONTAP</a>
+            </li>
+            <li class="n-section-nav__link-list-item">
+              <a href="#" title="Private Storage Cloud (Index)">NetApp Private Storage for Cloud</a>
+            </li>
+            <li class="n-section-nav__link-list-item">
+              <a href="#" title="StorageGRID Webscale">StorageGRID Webscale</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </section>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

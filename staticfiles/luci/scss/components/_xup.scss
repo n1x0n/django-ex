@@ -1,0 +1,51 @@
+$color-background: $color-gray-95;
+
+.n-band--gray-lighter {
+  background-color: $color-background;
+  padding: $spacing-lg 0;
+}
+
+.n-layout {
+  @include clearfix;
+}
+
+.n-layout__item {
+  margin-bottom: $spacing-default;
+}
+
+@media screen and (min-width: $screen-lg) {
+  .n-layout {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .n-layout__item {
+    flex: 1;
+    margin-bottom: 0;
+
+    .n-layout-3 & {
+      @include span(4 of 12);
+    }
+
+    .n-layout-2 & {
+      @include span(6 of 12);
+    }
+
+    .n-layout-4 & {
+      @include span(6 of 12);
+      flex-basis: span(6);
+      margin-bottom: $spacing-default;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xl) {
+  .n-layout__item {
+
+    .n-layout-4 & {
+      @include span(6 of 12);
+      flex: 1;
+      margin-bottom: 0;
+    }
+  }
+}

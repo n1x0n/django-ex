@@ -1,0 +1,32 @@
+.n-iconography-swatch {
+  display: inline-block;
+  margin: 0 $spacing-xs $spacing-lg 0;
+  vertical-align: top;
+  width: 210px;
+}
+
+.n-iconography-swatch__sample {
+  background: $color-gray-95;
+  height: 80px;
+  margin-bottom: $spacing-sm;
+  padding: 26px;
+  width: 80px;
+}
+
+.n-iconography-swatch__icon {
+  height: 26px;
+  width: 26px;
+}
+
+[class^="n-icon"] {
+  fill: $color-gray-27;
+
+  &:hover {
+    fill: $color-link-hover;
+  }
+}
+
+.n-iconography-swatch__title,
+.n-iconography-swatch__details {
+  font-size: $font-size-xs;
+}

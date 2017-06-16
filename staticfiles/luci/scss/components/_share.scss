@@ -1,0 +1,43 @@
+.n-share {
+  @extend %no-margin;
+  @extend %no-padding;
+  font-size: 0;
+  list-style: none;
+  margin-bottom: $spacing-component-bottom;
+}
+
+.n-share__list-item {
+  display: inline-block;
+
+  &:first-child {
+    .n-share__link {
+      padding-left: 0;
+    }
+  }
+
+  &:last-child {
+    .n-share__link {
+      padding-right: 0;
+    }
+  }
+}
+
+.n-share__link {
+  display: block;
+  padding: $spacing-xs;
+}
+
+.n-share__icon {
+  fill: $color-gray-52;
+  height: 18px;
+  width: 18px;
+
+  .n-share__link:hover & {
+    fill: $color-blue-light;
+  }
+}
+
+.n-share__text {
+  display: inline-block;
+  text-indent: -10000px;
+}

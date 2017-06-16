@@ -1,0 +1,13 @@
+.n-related {
+  margin-bottom: 30px; }
+
+@media screen and (min-width: 64em) {
+  .knowledgebase-browse__content-actions,
+  .knowledgebase-browse__pagination {
+    text-align: right; }
+  .knowledgebase-browse__related-content {
+    float: right; }
+  .knowledgebase-browse__primary-content {
+    width: 71%; } }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2UtdHlwZS5rbm93bGVkZ2ViYXNlLWJyb3dzZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0Usb0JBQW9CLEVBQ3JCOztBQUVEO0VBQ0U7O0lBRUUsa0JBQWtCLEVBQ25CO0VBRUQ7SUFDRSxhQUFhLEVBQ2Q7RUFFRDtJQUNFLFdBQVcsRUFDWixFQUFBIiwiZmlsZSI6InBhZ2UtdHlwZS5rbm93bGVkZ2ViYXNlLWJyb3dzZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICduZXRhcHAtbGlicmFyeS9zcmMvc2Nzcy91dGlscy92YXJpYWJsZXMnO1xuXG4ubi1yZWxhdGVkIHtcbiAgbWFyZ2luLWJvdHRvbTogMzBweDtcbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1pbi13aWR0aDogJHNjcmVlbi1sZykge1xuICAua25vd2xlZGdlYmFzZS1icm93c2VfX2NvbnRlbnQtYWN0aW9ucyxcbiAgLmtub3dsZWRnZWJhc2UtYnJvd3NlX19wYWdpbmF0aW9uIHtcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgfVxuXG4gIC5rbm93bGVkZ2ViYXNlLWJyb3dzZV9fcmVsYXRlZC1jb250ZW50IHtcbiAgICBmbG9hdDogcmlnaHQ7XG4gIH1cblxuICAua25vd2xlZGdlYmFzZS1icm93c2VfX3ByaW1hcnktY29udGVudCB7XG4gICAgd2lkdGg6IDcxJTtcbiAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */

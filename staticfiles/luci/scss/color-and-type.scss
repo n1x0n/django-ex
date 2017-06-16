@@ -1,0 +1,73 @@
+//add resets
+
+// Typography variables
+$font-size-default: 16px;
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-lg: 20px;
+$font-size-xl: 26px;
+
+$font-size-h1: 38px;
+$font-size-h2: 32px;
+$font-size-h3: 26px;
+$font-size-h4: 20px;
+$font-size-h5: 16px;
+$font-size-h6: 14px;
+
+$line-height-sm: 16px;
+$line-height-default: 29px;
+$line-height-lg: 34px;
+
+$spacing: $line-height-default;
+$spacing-default: $spacing;
+$spacing-component-bottom: $spacing;
+$spacing-xs: round($spacing-default / 4);
+$spacing-sm: round($spacing-default / 2);
+$spacing-lg: round($spacing-default * 2);
+$spacing-xl: round($spacing-default * 4);
+
+$screen-sm:  (420px / $font-size-default) * 1em;
+$screen-md:  (768px / $font-size-default) * 1em;
+$screen-lg:  (1024px / $font-size-default) * 1em;
+$screen-xl:  (1394px / $font-size-default) * 1em;
+
+// NetApp brand colors
+$color-blue:            #0067C5;
+$color-blue-dark:       #002855;
+
+// Neutral colors
+$color-black:           #000000;
+$color-gray-27:         #454545;
+$color-gray-36:         #53565A;
+$color-gray-41:         #686868;
+$color-gray-61:         #929497;
+$color-gray-64:         #A4A4A4;
+$color-gray-87:         #D9D9D6;
+$color-gray-97:         #F7F7F7;
+
+// Accent colors
+$color-blue-lighter:    #8DC8E8;
+$color-blue-light:      #0067C5;
+$color-green:           #007A33;
+$color-purple:          #3C1053;
+$color-orange:          #D76B00;
+
+// The following colors may NOT be unused per new color palette.
+// leaving these here until removed/replaced appropriately.
+$color-blue:            #4D8AD6;
+$color-blue-mid:        #0067C5;
+$color-blue-dark:       #4379BD;
+$color-blue-faded:      #B6D2F5;
+$color-danger:          #CF2128;
+$color-danger-light:    #FFCCCC;
+$color-green:           #82A827;
+$color-gray-52:         #848484;
+$color-gray-67:         #A6A8AB;
+$color-gray-95:         #F2F2F2;
+$color-link:            $color-blue-light;
+$color-link-hover:      $color-blue-dark;
+$color-success:         $color-green;
+$color-text-default:    $color-gray-27;
+$color-text-light:      $color-gray-41;
+$color-yellow:          #EE6023;
+$color-white:           #FFFFFF;

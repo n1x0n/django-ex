@@ -1,0 +1,56 @@
+.n-search-form {
+  font-size: 0;
+  width: 100%;
+}
+
+.n-search-form__input {
+  @include gotham-narrow-light;
+  background: $color-white;
+  border: solid 1px $color-gray-67;
+  border-radius: 6px 0 0 6px;
+  display: inline-block;
+  font-size: $font-size-default;
+  height: 40px;
+  margin: 0;
+  padding: $spacing-xs $spacing-sm;
+  vertical-align: middle;
+  width: 300px;
+
+  &:focus {
+    border-color: $color-black;
+    outline: none;
+  }
+}
+
+.n-search-form__button {
+  background: $color-blue-light;
+  border: 0;
+  border-radius: 0 $border-radius-sm $border-radius-sm 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0;
+  height: 40px;
+  padding: 0;
+  vertical-align: middle;
+  width: 40px;
+
+  &:hover {
+    background: $color-blue-dark;
+
+    .n-search-form__button-icon {
+      fill: $color-white;
+    }
+  }
+}
+
+.n-search-form__button-text {
+  display: block;
+  text-indent: -10000px;
+}
+
+.n-search-form__button-icon {
+  display: inline-block;
+  fill: $color-white;
+  height: 18px;
+  width: 18px;
+}

@@ -1,0 +1,20 @@
+.n-content-metadata {
+  font-size: $font-size-sm;
+  margin-bottom: $spacing-component-bottom;
+}
+
+.n-content-metadata__rating {
+  border-right: solid 1px $color-gray-64;
+  margin-right: 20px;
+  padding-right: 20px;
+
+  .n-rating__count {
+    font-size: $font-size-default;
+  }
+}
+
+.n-content-metadata__text,
+.n-content-metadata__link {
+  display: inline-block;
+  padding: 0 20px 0 0;
+}

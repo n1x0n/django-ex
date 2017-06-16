@@ -1,0 +1,108 @@
+.n-related {
+  @include clearfix;
+  background-color: $color-gray-97;
+  border-bottom: 6px solid $color-gray-87;
+  margin-bottom: $spacing-component-bottom;
+  padding: 45px 45px 16px;
+
+  [class^='n-icon-doc-'] {
+    fill: $color-gray-64;
+    height: 20px;
+    width: 20px;
+  }
+
+  p {
+    font-size: $font-size-sm;
+    line-height: 1.45em;
+  }
+
+  li {
+    font-size: $font-size-sm;
+    line-height: 1.45em;
+  }
+
+  ol {
+    font-size: $font-size-sm;
+    line-height: 1.45em;
+  }
+}
+
+.n-related__header {
+  font-size: $font-size-h4;
+  margin-bottom: $spacing-default;
+}
+
+.n-related__subheader {
+  color: $color-gray-52;
+  font-size: 14px;
+  margin-bottom: $spacing-sm;
+  margin-top: -$spacing-sm;
+  text-transform: uppercase;
+}
+
+.n-related__list-item {
+  font-size: $font-size-sm;
+  margin-bottom: $spacing-sm;
+}
+
+.n-related__list-item-icon {
+  display: inline;
+  fill: $color-gray-52;
+  height: 12px;
+  width: 12px;
+}
+
+// Icon List
+
+.n-related-icon-list .n-related__list-item {
+  padding-left: 24px;
+  position: relative;
+}
+
+.n-related-icon-list .n-related__list-item-icon {
+  left: 0;
+  position: absolute;
+  top: 3px;
+}
+
+.n-related__icon-danger {
+  fill: $color-danger;
+}
+
+.n-related__icon-green {
+  fill: $color-green;
+}
+
+// Authors
+
+.n-related-authors .n-related__list-item {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.n-related__author {
+  display: block;
+  padding-left: 50px;
+  padding-right: 36px;
+}
+
+.n-related__author-photo {
+  height: 36px;
+  left: 0;
+  position: absolute;
+  top: -7px;
+  width: 36px;
+}
+
+.n-related__author-count {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.n-related__view-all {
+  display: block;
+  margin-bottom: $spacing-default;
+  text-align: right;
+}
+

@@ -1,0 +1,196 @@
+.n-menu {
+  background: $color-white;
+  border-bottom: solid 4px $color-blue-light;
+  box-shadow: $drop-shadow-default;
+  display: none;
+  min-width: 230px;
+  position: absolute;
+  z-index: z('menu');
+
+  &.n-menu--is-active {
+    display: inline-block;
+  }
+
+  &.n-menu--is-truncated,
+  &.n-menu--is-active.n-menu--is-truncated {
+    display: none;
+  }
+}
+
+// Documentation Page Adjustment
+
+.n-component-example {
+  .n-menu {
+    position: relative;
+  }
+}
+
+.n-menu--empty {
+  max-width: 960px;
+
+  img {
+    max-width: 100%;
+    min-width: 768px;
+  }
+}
+
+.n-menu__list {
+  @extend %no-margin;
+  @extend %no-padding;
+  display: table;
+  list-style: none;
+}
+
+
+.n-menu__list-item--level-1:last-child {
+  padding-bottom: $spacing-default;
+}
+
+.n-menu__list-item--level-1 > .n-menu__link {
+  font-size: $font-size-sm;
+}
+
+.n-menu__link {
+  color: $color-gray-52;
+  display: block;
+  font-size: $font-size-xs;
+  padding: $spacing-xs $spacing-default;
+
+  &:hover {
+    color: $color-blue-light;
+    text-decoration: underline;
+  }
+}
+
+.n-menu__header-link,
+.n-menu__header-text {
+  @include gotham-narrow-bold;
+  color: $color-gray-27;
+  display: block;
+  font-size: $font-size-xs;
+  padding: $spacing-xs $spacing-default;
+  text-transform: uppercase;
+}
+
+.n-menu__header-link:hover {
+  text-decoration: underline;
+}
+
+.n-menu__list-item:not(.n-menu__list-item--level-1) .n-menu__link {
+  margin-left: $spacing-sm;
+}
+
+.n-menu__list-section {
+  display: table-cell;
+  min-width: 230px;
+  vertical-align: top;
+
+  + .n-menu__list-section {
+    border-left: solid 1px $color-gray-95;
+  }
+}
+
+.n-menu--v2 {
+  .n-menu__list-section {
+    max-width: 250px;
+  }
+}
+
+.n-menu--v3 {
+  .n-menu__list-column {
+    max-width: 250px;
+  }
+
+  &.n-menu--is-narrow {
+    // v3 has two 'sections' with columns inside sections
+    .n-menu__list-section:first-child:nth-last-child(2),
+    .n-menu__list-section:first-child:nth-last-child(2) ~ li {
+      display: inline-block;
+      max-width: none;
+      width: 100%;
+
+      &:nth-child(2) {
+        border-top: solid 1px $color-gray-95;
+      }
+    }
+
+    .n-menu__list-header {
+      border-top: 0;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+
+.n-menu--is-narrow {
+  width: 100%;
+
+  .n-menu__list {
+    display: block;
+    font-size: 0;
+  }
+  // Sibling count selectors via: http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
+
+  // Four columns condenses down to two on top, two on bottom
+  .n-menu__list-section:first-child:nth-last-child(4),
+  .n-menu__list-section:first-child:nth-last-child(4) ~ li {
+    display: inline-block;
+    max-width: none;
+    width: 50%;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      border-top: solid 1px $color-gray-95;
+    }
+
+    &:nth-child(3) {
+      border-left: 0;
+    }
+  }
+
+  // Five columns condenses down to three on top, two on bottom
+  .n-menu__list-section:first-child:nth-last-child(5),
+  .n-menu__list-section:first-child:nth-last-child(5) ~ li {
+    display: inline-block;
+    max-width: none;
+    width: 33%;
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      border-top: solid 1px $color-gray-95;
+      width: 50%;
+    }
+
+    &:nth-child(4) {
+      border-left: 0;
+    }
+  }
+}
+
+.n-menu__list-column {
+  display: table-cell;
+  min-width: 230px;
+  vertical-align: top;
+}
+
+.n-menu__list-header-text {
+  color: $color-gray-52;
+  display: block;
+  font-size: $font-size-default;
+  padding: $spacing-default $spacing-default $spacing-sm;
+
+  + .n-menu__list {
+    margin-left: $spacing-sm;
+  }
+}
+
+.n-menu__list-header + .n-menu__list-header {
+  border-top: solid 1px $color-gray-95;
+}
+
+.n-menu--v1,
+.n-menu--v2 {
+  .n-menu__list-item--level-1:first-child {
+    padding-top: $spacing-default;
+  }
+}

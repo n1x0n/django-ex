@@ -1,0 +1,42 @@
+@mixin font-size($font-size, $line-height: auto) {
+  font-size: ($font-size / $font-size-default) * 1rem;
+
+  @if $line-height == auto {
+    line-height: ceil($font-size / $line-height-default) * ($line-height-default / $font-size);
+  } @else {
+
+    @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+        line-height: $line-height;
+    } @elseif ($line-height != none and $line-height != false) {
+        @warn "The ‘#{$line-height}’ is not a valid value for `line-height`.";
+    }
+  }
+}
+
+@mixin full-height-hidden-pseudo-element() {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+  }
+}
+
+@mixin list-reset {
+  @extend %no-margin;
+  @extend %no-padding;
+  list-style: none;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <div class="n-feature-block false n-feature-block--subscribe ">
+    <h3 class="n-feature-block__title">IDC White Paper: FAS2500 Business Benefits</h3>
+    <div class="n-feature-block__body">
+      <div class="n-feature-block__captioned-image">
+        <p class="n-feature-block__caption"> Explore how NetApp is redefining unified storage. </p>
+        <div class="n-feature-block__image-wrap"> <img src="../images/feature-block-netapp-logo.png" alt=""> </div>
+      </div>
+      <form class="n-feature-block__form n-form--dark-bg">
+        <div class="n-form__field-group">
+          <label class="n-form__label"> Work Email </label>
+          <input class="n-form__input" type="text"> </div>
+        <div class="n-form__field-group">
+          <label class="n-form__label"> Country </label>
+          <div class="n-form__select">
+            <select class="n-form__select-input" id="">
+              <option class="n-form__select-option n-form__select-option--default" value="">Select a country</option>
+              <option class="n-form__select-option" value="usa">USA</option>
+              <option class="n-form__select-option" value="canada">Canada</option>
+              <option class="n-form__select-option" value="mexico">Mexico</option>
+            </select>
+            <div class="n-form__select-visual-wrap"> </div>
+            <span class="n-form__select-open-indicator">
+              <svg class="n-icon-chevron-down n-form__select-open-icon" aria-labelledby="title">
+                <title>chevron-down</title>
+                <use xlink:href="../svg/sprite.svg#chevron-down"></use>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="n-form__field-group">
+          <label class="n-form__checkbox" for="checkbox-group-example-1">
+            <input id="checkbox-group-example-1" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">Get updated on NetApp products, services, promotions, news &amp; events</span>
+          </label>
+        </div>
+        <div class="n-form__field-group">
+          <label class="n-form__checkbox" for="checkbox-group-example-2">
+            <input id="checkbox-group-example-2" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">Please contact me.</span>
+          </label>
+        </div>
+        <a href="link/to/somewhere.html" class="button button--inline-action n-feature-block__form-button button--inverse">
+          <span class="button__text">Download</span>
+          <svg class="n-icon-arrow-right button__icon" aria-labelledby="title">
+            <title>arrow-right</title>
+            <use xlink:href="../svg/sprite.svg#arrow-right"></use>
+          </svg>
+        </a>
+      </form>
+      <a href="#" class="n-feature-block__aside-link">Privacy</a>
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+.n-icon-legend {
+  @include list-reset;
+  @include gotham-light;
+  font-size: $font-size-xs;
+  margin-bottom: $spacing-component-bottom - $spacing-sm;
+}
+
+.n-icon-legend__icon {
+  fill: $color-blue-light;
+  height: 10px;
+  width: 10px;
+}
+
+.n-icon-legend__list-item {
+  display: inline-block;
+  margin-bottom: $spacing-xs;
+  margin-right: $spacing-sm;
+}
+
+.n-icon-legend__icon--completed-indicator {
+  fill: $color-success;
+}
+
+.n-icon-legend__icon--rejected-indicator {
+  fill: $color-danger;
+}

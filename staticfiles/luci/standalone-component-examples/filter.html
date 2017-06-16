@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <div class="n-filter">
+    <label class="n-form__label n-filter__label"> Filter by: </label>
+    <div class="n-filter__section">
+      <a href="#" class="n-filter__section-header">Environment
+        <svg class="n-icon-chevron-down n-filter__open-icon" aria-labelledby="title">
+          <title>chevron-down</title>
+          <use xlink:href="../svg/sprite.svg#chevron-down"></use>
+        </svg>
+      </a>
+      <div class="n-filter__column">
+        <ul class="n-filter__list">
+          <li class="n-filter__list-item">
+            <a href="#" class="n-filter__link">Data ONTAP</a>
+            <span class="n-filter__results-count">(9)</span>
+          </li>
+          <li class="n-filter__list-item">
+            <a href="#" class="n-filter__link">Language</a>
+            <span class="n-filter__results-count">(6)</span>
+          </li>
+          <li class="n-filter__list-item">
+            <a href="#" class="n-filter__link">Mac OS</a>
+            <span class="n-filter__results-count">(1)</span>
+          </li>
+          <li class="n-filter__list-item">
+            <a href="#" class="n-filter__link">UNIX</a>
+            <span class="n-filter__results-count">(14)</span>
+          </li>
+          <li class="n-filter__list-item">
+            <a href="#" class="n-filter__link">Windows</a>
+            <span class="n-filter__results-count">(12)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="n-filter__section">
+      <a href="#" class="n-filter__section-header">Tasks
+        <svg class="n-icon-chevron-down n-filter__open-icon" aria-labelledby="title">
+          <title>chevron-down</title>
+          <use xlink:href="../svg/sprite.svg#chevron-down"></use>
+        </svg>
+      </a>
+      <div class="n-filter__column">
+        <ul class="n-filter__list">
+          <li class="n-filter__list-item">
+            <a href="#" class="n-filter__link">Administration</a>
+            <span class="n-filter__results-count">(25)</span>
+            <ul class="n-filter__list">
+              <li class="n-filter__list-item">
+                <a href="#" class="n-filter__link">Data Management</a>
+                <span class="n-filter__results-count">(3)</span>
+              </li>
+              <li class="n-filter__list-item">
+                <a href="#" class="n-filter__link">Data Migration</a>
+                <span class="n-filter__results-count">(2)</span>
+              </li>
+              <li class="n-filter__list-item">
+                <a href="#" class="n-filter__link">Monitoring</a>
+                <span class="n-filter__results-count">(9)</span>
+              </li>
+              <li class="n-filter__list-item">
+                <a href="#" class="n-filter__link">Reporting</a>
+                <span class="n-filter__results-count">(11)</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="n-filter__column">
+        <ul class="n-filter__list">
+          <li class="n-filter__list-item">
+            <a href="#" class="n-filter__link">Configuration</a>
+            <span class="n-filter__results-count">(13)</span>
+          </li>
+          <li class="n-filter__list-item">
+            <a href="#" class="n-filter__link">Evaluation</a>
+            <span class="n-filter__results-count">(3)</span>
+          </li>
+          <li class="n-filter__list-item">
+            <a href="#" class="n-filter__link">Performance Analysis</a>
+            <span class="n-filter__results-count">(12)</span>
+          </li>
+          <li class="n-filter__list-item">
+            <a href="#" class="n-filter__link">Reference</a>
+            <span class="n-filter__results-count">(8)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

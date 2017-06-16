@@ -1,0 +1,42 @@
+.esb-frame {
+  background: none;
+  box-shadow: none;
+  display: block;
+  margin-bottom: $spacing-default;
+  margin-top: 0;
+  text-align: left;
+
+  + .esb-frame {
+    margin-left: 0;
+    margin-top: $spacing-default;
+  }
+}
+
+.esb-frame-iframe-wrap {
+  background: $color-white;
+  border-top: solid 1px $color-gray-97;
+  box-shadow: $drop-shadow-default;
+  margin: 0;
+}
+
+.esb-frame-dimensions-annotation,
+.component-documentation .esb-frame-dimensions-annotation {
+  line-height: .8em;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.esb-frame-title {
+  color: $color-text-default;
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-sm;
+  padding-bottom: 0;
+  padding-left: 0;
+
+  .esb-frame-link:hover & {
+    color: $color-blue-light;
+    text-decoration: none;
+  }
+}
+

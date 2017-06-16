@@ -1,0 +1,219 @@
+.n-top-hat {
+  display: none;
+}
+
+.n-top-hat__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.n-top-hat__list-item-header {
+  @include font-size(14px);
+  @include gotham-medium;
+
+  color: $color-white;
+  display: none;
+  text-transform: uppercase;
+
+  .off-canvas__cross-property-nav & {
+    display: block;
+  }
+}
+
+.n-top-hat__link {
+  @include font-size(12px);
+  @include gotham-light;
+
+  color: $color-white;
+  display: block;
+  padding: 15px 0;
+
+  &:hover {
+    color: $color-white;
+  }
+}
+
+.n-top-hat__link-text {
+  display: inline-block;
+  font-size: $font-size-xs;
+  vertical-align: middle;
+}
+
+.n-top-hat__user-icon,
+.n-top-hat__key-icon {
+  display: inline-block;
+  fill: $color-white;
+  height: 12px;
+  margin-right: $spacing-xs;
+  vertical-align: middle;
+  width: 12px;
+}
+
+.n-top-hat__menu-indicator {
+  display: inline-block;
+  fill: $color-white;
+  height: 10px;
+  margin-left: $spacing-xs;
+  vertical-align: middle;
+  width: 10px;
+}
+
+.n-top-hat__profile-list-item {
+  position: relative;
+}
+
+.n-top-hat__profile-link--is-active {
+  background: $color-gray-27;
+  background-image: linear-gradient(to top, $color-blue-light, $color-blue-light 4px, $color-gray-27 4px);
+
+  &:hover {
+    color: $color-white;
+  }
+
+  .n-top-hat__menu-indicator {
+    transform: rotate(180deg);
+  }
+}
+
+.n-top-hat__profile-menu {
+  // @include font-size(14px);
+  background-color: $color-white;
+  border-bottom: 4px solid $color-blue-light;
+  box-shadow: $drop-shadow-default;
+  display: none;
+  font-size: $font-size-sm;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 100%;
+  width: 245px;
+  z-index: z('menu');
+
+  .n-top-hat__profile-link--is-active + & {
+    display: block;
+  }
+}
+
+.n-top-hat__profile-menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.n-top-hat__profile-menu-support-link {
+  border-bottom: solid 1px $color-gray-95;
+  border-top: solid 1px $color-gray-95;
+  color: $color-gray-41;
+  display: block;
+  margin: 0 $spacing-default $spacing-sm;
+  padding: $spacing-sm 0;
+}
+
+.n-top-hat__profile-menu-list-link {
+  color: $color-gray-41;
+  display: block;
+  padding: $spacing-xs $spacing-default;
+}
+
+.n-top-hat__profile-menu-user-info {
+  padding: $spacing-default $spacing-default $spacing-sm;
+}
+
+.n-top-hat__profile-menu-username {
+  @include gotham-book;
+  display: block;
+}
+
+.n-top-hat__profile-menu-company {
+  font-size: $font-size-xs;
+}
+
+.n-top-hat__profile-menu-log-out-link {
+  background: $color-gray-95;
+  margin-top: $spacing-sm;
+  padding: $spacing-sm $spacing-default;
+}
+
+@media screen and (min-width: $screen-md) {
+  .n-top-hat {
+    background-color: $color-gray-41;
+    display: block;
+  }
+
+  .n-top-hat__cross-property-nav {
+    @include span (4 of $semantic-layout-md);
+  }
+
+  .n-top-hat__list-item {
+    display: inline-block;
+    padding: 0 $spacing-xs;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  .n-top-hat__link {
+    padding: 0;
+
+    &:hover {
+      color: $color-gray-87;
+    }
+  }
+
+  .n-top-hat__profile-list-item {
+    padding-left: 0;
+  }
+
+  .n-top-hat__profile-link {
+    padding-left: $spacing-sm;
+    padding-right: $spacing-sm;
+  }
+
+  .n-top-hat__utils {
+    @include span (4 of $semantic-layout-md last);
+    text-align: right;
+  }
+
+  .n-top-hat__menu-indicator {
+    display: inline-block;
+    fill: $color-blue-light;
+    height: 10px;
+    margin-right: $spacing-xs;
+    vertical-align: middle;
+    width: 10px;
+  }
+
+  .n-top-hat__user-icon,
+  .n-top-hat__key-icon {
+    display: inline-block;
+    fill: $color-blue-light;
+    height: 12px;
+    margin-left: $spacing-xs;
+    vertical-align: middle;
+    width: 12px;
+  }
+
+  .n-top-hat__profile-menu-support-link-icon {
+    display: inline-block;
+    fill: $color-blue-light;
+    height: 14px;
+    margin-left: $spacing-xs;
+    vertical-align: middle;
+    width: 14px;
+  }
+
+  .n-top-hat__profile-list-item {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .n-top-hat__cross-property-nav {
+    @include span (6 of $semantic-layout-lg);
+  }
+
+  .n-top-hat__utils {
+    @include span (6 of $semantic-layout-lg last);
+  }
+}

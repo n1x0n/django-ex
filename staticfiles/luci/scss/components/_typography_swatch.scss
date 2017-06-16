@@ -1,0 +1,77 @@
+.n-typography-swatch__sample {
+  font-size: $font-size-lg;
+  // margin-bottom: $spacing-sm;
+  padding-bottom: $spacing-sm;
+  vertical-align: middle;
+  width: 300px;
+}
+
+.n-typography-swatch__sample--gotham-extra-light {
+  @include gotham-extra-light;
+}
+
+.n-typography-swatch__sample--gotham-extra-light-italic {
+  @include gotham-extra-light;
+  font-style: italic;
+}
+
+.n-typography-swatch__sample--gotham-light {
+  @include gotham-light;
+}
+
+.n-typography-swatch__sample--gotham-light-italic {
+  @include gotham-light;
+  font-style: italic;
+}
+
+.n-typography-swatch__sample--gotham-book {
+  @include gotham-book;
+}
+
+.n-typography-swatch__sample--gotham-book-italic {
+  @include gotham-book;
+  font-style: italic;
+}
+
+.n-typography-swatch__sample--gotham-bold {
+  @include gotham-bold;
+}
+
+.n-typography-swatch__sample--gotham-bold-italic {
+  @include gotham-bold;
+  font-style: italic;
+}
+
+.n-typography-swatch__sample--gotham-narrow-book {
+  @include gotham-narrow-book;
+}
+
+.n-typography-swatch__sample--gotham-narrow-book-italic {
+  @include gotham-narrow-book;
+  font-style: italic;
+}
+
+.n-typography-swatch__sample--gotham-narrow-bold {
+  @include gotham-narrow-bold;
+}
+
+.n-typography-swatch__sample--gotham-narrow-bold-italic {
+  @include gotham-narrow-bold;
+  font-style: italic;
+}
+
+.n-typography-swatch__code-sample {
+  padding-bottom: $spacing-sm;
+  vertical-align: middle;
+  width: 300px;
+
+  .n-code-snippet {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+
+    code {
+      margin-bottom: 0;
+    }
+  }
+}

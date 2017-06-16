@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="#" class="n-top-hat__link">NetApp.com</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="#" class="n-top-hat__link">Support</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="#" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="#" class="n-top-hat__link">Training</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item n-top-hat__profile-list-item">
+            <a href="#" class="n-top-hat__link n-top-hat__profile-link">
+              <span class="n-top-hat__link-text">Chandralekaha</span>
+              <svg class="n-icon-chevron-down n-top-hat__menu-indicator" aria-labelledby="title">
+                <title>chevron-down</title>
+                <use xlink:href="../svg/sprite.svg#chevron-down"></use>
+              </svg>
+            </a>
+            <div class="n-top-hat__profile-menu">
+              <ul class="n-top-hat__profile-menu-list">
+                <li class="n-top-hat__profile-menu-list-item n-top-hat__profile-menu-user-info">
+                  <span class="n-top-hat__profile-menu-username"> </span>
+                  <span class="n-top-hat__profile-menu-company"> ABC Company, Inc. </span>
+                </li>
+                <li class="n-top-hat__profile-menu-list-item">
+                  <a href="#" class="n-top-hat__profile-menu-support-link">
+                    <svg class="n-icon-user n-top-hat__profile-menu-support-link-icon" aria-labelledby="title">
+                      <title>user</title>
+                      <use xlink:href="../svg/sprite.svg#user"></use>
+                    </svg>
+                    <span class="n-top-hat__profile-menu-support-link-text"> My Support Home </span>
+                  </a>
+                </li>
+                <li class="n-top-hat__profile-menu-list-item">
+                  <a class="n-top-hat__profile-menu-list-link" href="#">Notifications</a>
+                </li>
+                <li class="n-top-hat__profile-menu-list-item">
+                  <a class="n-top-hat__profile-menu-list-link" href="#">My Profile</a>
+                </li>
+                <li class="n-top-hat__profile-menu-list-item">
+                  <a class="n-top-hat__profile-menu-list-link" href="#">Bookmarks</a>
+                </li>
+                <li class="n-top-hat__profile-menu-list-item">
+                  <a class="n-top-hat__profile-menu-list-link" href="#">Saved Searches</a>
+                </li>
+                <li class="n-top-hat__profile-menu-list-item">
+                  <a class="n-top-hat__profile-menu-list-link" href="#">Queries</a>
+                </li>
+                <li class="n-top-hat__profile-menu-list-item">
+                  <a href="#" class="n-top-hat__profile-menu-list-link n-top-hat__profile-menu-log-out-link">Log Out</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="#" class="n-top-hat__link">
+              <span class="n-top-hat__link-text">Contact Us</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

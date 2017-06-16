@@ -1,0 +1,272 @@
+$footer-background-color: $color-gray-97;
+
+.n-footer {
+  background: $color-gray-97;
+  // Stacked box shadows give the illusion that the footer spreads to fill any empty browser space below
+  box-shadow: 0 200px 0 $footer-background-color, 0 400px 0 $footer-background-color, 0 600px 0 $footer-background-color, 0 800px 0 $footer-background-color, 0 1000px 0 $footer-background-color, 0 1200px 0 $footer-background-color, 0 1400px 0 $footer-background-color;
+}
+
+.n-footer__top {
+  border-bottom: solid 4px $color-gray-87;
+}
+
+.n-footer--v2 .n-footer__top {
+  padding-top: 0;
+
+  .n-container {
+    @extend %no-padding;
+    display: flex;
+    flex-basis: 1;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+}
+
+.n-footer--v2 .n-footer__property-links,
+.n-footer--v2 .n-footer__corp-links {
+  padding: $spacing-default 0 $spacing-sm $spacing-default;
+}
+
+.n-footer--v2 .n-footer__property-links {
+  background-color: $color-gray-87;
+}
+
+.n-footer--v2 .n-footer__corp-links {
+  background-color: $color-gray-97;
+}
+
+
+.n-footer__top-inner {
+  p {
+    font-size: $font-size-sm;
+    max-width: 700px;
+    padding: $spacing-default;
+  }
+}
+
+.n-footer__corp-links {
+  @include clearfix;
+  padding-top: $spacing-default;
+}
+
+.n-footer__corp-link-list {
+  @extend %no-margin;
+  @extend %no-padding;
+  @include gallery(2 of $semantic-layout-sm);
+  font-size: $font-size-xs;
+  list-style: none;
+  margin-bottom: $spacing-default;
+}
+
+// Do we still need this selector? Why do we extend below?
+.n-footer__corp-link-list-header,
+.n-footer__property-link-list-header,
+%n-footer__corp-link-list-header {
+  @include gotham-book;
+  color: $color-text-default;
+  font-size: $font-size-xs;
+  line-height: 17px;
+  padding-bottom: $spacing-xs;
+  text-transform: uppercase;
+}
+
+.n-footer__corp-link {
+  color: $color-text-light;
+  display: block;
+  padding-bottom: $spacing-xs;
+  padding-right: $spacing-default;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  .n-footer__corp-link-list-header & {
+    @extend %n-footer__corp-link-list-header;
+    padding-bottom: 0;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}
+
+.n-footer__bottom {
+  padding: $spacing-default 0;
+}
+
+.n-footer__bottom-left {
+  padding-bottom: $spacing-default;
+}
+
+.n-footer__copyright {
+  border-right: solid 1px $color-text-light;
+  color: $color-text-light;
+  display: inline-block;
+  font-size: $font-size-xs;
+  margin-right: $spacing-sm;
+  padding-right: $spacing-sm;
+  vertical-align: middle;
+}
+
+.n-footer__social-links {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.n-footer__social-link-list {
+  @extend %no-margin;
+  @extend %no-padding;
+  font-size: 0;
+  list-style: none;
+}
+
+.n-footer__social-link-list-item {
+  display: inline-block;
+}
+
+.n-footer__social-link {
+  display: block;
+}
+
+.n-footer__social-link-text {
+  display: inline-block;
+  text-indent: -10000px;
+}
+
+.n-footer__social-link-icon {
+  fill: $color-text-light;
+  height: 15px;
+  margin-right: $spacing-xs;
+  width: 15px;
+
+  .n-footer__social-link:hover & {
+    fill: $color-blue-light;
+  }
+}
+
+.n-footer__fine-print {
+  color: $color-text-light;
+  font-size: $font-size-xs;
+  line-height: $font-size-default;
+  margin-bottom: $spacing-xs;
+}
+
+.n-footer__property-link-list,
+.n-footer__property-link-column-list {
+  @extend %no-margin;
+  @extend %no-padding;
+  list-style: none;
+}
+
+.n-footer__property-link {
+  color: $color-text-light;
+  display: block;
+  font-size: $font-size-xs;
+  padding-bottom: $spacing-xs;
+  padding-right: $spacing-default;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.n-footer__property-links {
+  @include clearfix;
+  padding: $spacing-default 0;
+}
+
+.n-footer__property-link-list {
+  @include clearfix;
+}
+
+.n-footer__property-link-column {
+  @include span(2 of $semantic-layout-sm);
+  &:last-child {
+    @include span(last 2 of $semantic-layout-sm);
+  }
+}
+
+.n-footer--v2 .n-footer__property-link-column {
+  @include span(2 of $semantic-layout-sm);
+  &:last-child {
+    @include span(last 2 of $semantic-layout-sm);
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .n-footer--v1 .n-footer__corp-link-list {
+    @include gallery(2 of $semantic-layout-md);
+  }
+
+  .n-footer--v2 .n-footer__top .n-container {
+    flex-flow: row nowrap;
+  }
+
+  .n-footer--v2 .n-footer__property-links {
+    @include span(3 of $semantic-layout-md);
+    padding-bottom: 0;
+    padding-left: $spacing-default;
+  }
+
+  .n-footer--v2 .n-footer__corp-links {
+    @include span(last 5 of $semantic-layout-md);
+    padding-bottom: 0;
+  }
+
+  .n-footer__bottom-left {
+    @include span(4 of $semantic-layout-md);
+    padding-bottom: 0;
+  }
+
+  .n-footer__bottom-right {
+    @include span(last 4 of $semantic-layout-md);
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .n-footer__corp-link-list {
+    @include gallery(3 of $semantic-layout-lg);
+  }
+
+  .n-footer__bottom-left {
+    @include span(6 of $semantic-layout-lg);
+  }
+
+  .n-footer__bottom-right {
+    @include span(last 6 of $semantic-layout-lg);
+  }
+
+  .n-footer--v2 .n-footer__property-links {
+    @include span(4 of $semantic-layout-lg);
+    padding-left: $spacing-lg;
+    padding-right: 0;
+  }
+
+  .n-footer--v2 .n-footer__corp-links {
+    @include span(last 8 of $semantic-layout-lg);
+    padding-right: 0;
+  }
+}
+
+// ****** BEGIN MODIFIERS FOR MINIMAL VARIATION ********
+.n-footer__corp-link-list--minimal {
+  display: flex;
+  white-space: nowrap;
+}
+
+.n-footer__corp-link--minimal {
+  padding-right: $spacing-sm;
+}
+
+.n-footer__social-links--minimal {
+  float: right;
+}
+
+@media screen and (max-width: $screen-sm) {
+  .n-footer__corp-link-list--minimal {
+    display: inline-block;
+  }
+}
+// ****** END  MODIFIERS FOR MINIMAL VARIATION ********

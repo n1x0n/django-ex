@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <div class="n-search-filter">
+    <div class="n-search-filter__dropdown-menu">
+      <label for="" class="n-search-filter__dropdown-menu-label">Filter By:</label>
+      <div class="n-dropdown-menu n-dropdown-menu--is-filter n-search-filter__dropdown-menu-dropdown">
+        <a href="#" class="n-dropdown-menu__trigger">
+          <span class="n-dropdown-menu__trigger-text">Documentation (327)
+            <svg class="n-icon-filter n-search-filter__panel-toggle-icon" aria-labelledby="title">
+              <title>filter</title>
+              <use xlink:href="../svg/sprite.svg#filter"></use>
+            </svg>
+          </span>
+          <svg class="n-icon-chevron-down n-dropdown-menu__trigger-icon" aria-labelledby="title">
+            <title>chevron-down</title>
+            <use xlink:href="../svg/sprite.svg#chevron-down"></use>
+          </svg>
+        </a>
+        <div class="n-dropdown-menu__menu">
+          <ul class="n-dropdown-menu__list">
+            <li class="n-dropdown-menu__list-item">
+              <a href="#" class="n-dropdown-menu__link">All (402)</a>
+            </li>
+            <li class="n-dropdown-menu__list-item">
+              <a href="#" class="n-dropdown-menu__link">Documentation (327)
+                <svg class="n-icon-filter n-search-filter__panel-toggle-icon" aria-labelledby="title">
+                  <title>filter</title>
+                  <use xlink:href="../svg/sprite.svg#filter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-dropdown-menu__list-item">
+              <a href="#" class="n-dropdown-menu__link">Solutions (23)</a>
+            </li>
+            <li class="n-dropdown-menu__list-item">
+              <a href="#" class="n-dropdown-menu__link">Partners (17)
+                <svg class="n-icon-filter n-search-filter__panel-toggle-icon" aria-labelledby="title">
+                  <title>filter</title>
+                  <use xlink:href="../svg/sprite.svg#filter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-dropdown-menu__list-item">
+              <a href="#" class="n-dropdown-menu__link">Customer Stories (12)
+                <svg class="n-icon-filter n-search-filter__panel-toggle-icon" aria-labelledby="title">
+                  <title>filter</title>
+                  <use xlink:href="../svg/sprite.svg#filter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-dropdown-menu__list-item">
+              <a href="#" class="n-dropdown-menu__link">News and Events (2)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="n-search-filter__list">
+      <li class="n-search-filter__list-item ">
+        <a href="#" class="n-search-filter__link"> All (402) </a>
+      </li>
+      <li class="n-search-filter__list-item n-search-filter__list-item--active">
+        <a href="#" class="n-search-filter__link" data-panel-id="n-search-filter-panel--documentation"> Documentation (327)
+          <svg class="n-icon-filter n-search-filter__panel-toggle-icon" aria-labelledby="title">
+            <title>filter</title>
+            <use xlink:href="../svg/sprite.svg#filter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="n-search-filter__list-item ">
+        <a href="#" class="n-search-filter__link"> Solutions (23) </a>
+      </li>
+      <li class="n-search-filter__list-item ">
+        <a href="#" class="n-search-filter__link" data-panel-id="n-search-filter-panel--partners"> Partners (17)
+          <svg class="n-icon-filter n-search-filter__panel-toggle-icon" aria-labelledby="title">
+            <title>filter</title>
+            <use xlink:href="../svg/sprite.svg#filter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="n-search-filter__list-item ">
+        <a href="#" class="n-search-filter__link" data-panel-id="n-search-filter-panel--customer-stories"> Customer Stories (12)
+          <svg class="n-icon-filter n-search-filter__panel-toggle-icon" aria-labelledby="title">
+            <title>filter</title>
+            <use xlink:href="../svg/sprite.svg#filter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="n-search-filter__list-item ">
+        <a href="#" class="n-search-filter__link"> News and Events (2) </a>
+      </li>
+    </ul>
+    <a class="n-search-filter__refine-link" href="#">Refine
+      <svg class="n-icon-plus n-search-filter__refine-link-icon" aria-labelledby="title">
+        <title>plus</title>
+        <use xlink:href="../svg/sprite.svg#plus"></use>
+      </svg>
+    </a>
+    <div class="n-search-filter__refine-selected-filters">
+      <span class="n-tag n-search-filter__refine-tag-template n-search-filter__refine-tag">
+        <span class="n-tag__text"> Sample </span>
+        <svg class="n-icon-close n-tag__delete-icon" aria-labelledby="title">
+          <title>close</title>
+          <use xlink:href="../svg/sprite.svg#close"></use>
+        </svg>
+      </span>
+    </div>
+    <div class="n-search-filter-panels">
+      <div id="n-search-filter-panel--documentation" class="n-search-filter__panel n-search-filter__panel--active">
+        <div class="n-form__checkbox-group n-form__checkbox-group--horizontal">
+          <label class="n-form__checkbox n-search-filter__refine-checkbox" for="documentation-tech-reports">
+            <input id="documentation-tech-reports" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">Tech Reports</span>
+          </label>
+          <label class="n-form__checkbox n-search-filter__refine-checkbox" for="documentation-analyst-reports">
+            <input id="documentation-analyst-reports" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">Analyst Reports</span>
+          </label>
+          <label class="n-form__checkbox n-search-filter__refine-checkbox" for="documentation-white-papers">
+            <input id="documentation-white-papers" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">White Papers</span>
+          </label>
+          <label class="n-form__checkbox n-search-filter__refine-checkbox" for="documentation-data-sheets">
+            <input id="documentation-data-sheets" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">Data Sheets</span>
+          </label>
+          <label class="n-form__checkbox n-search-filter__refine-checkbox" for="documentation-data-sheets-2">
+            <input id="documentation-data-sheets-2" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">Data Sheets 2</span>
+          </label>
+          <label class="n-form__checkbox n-search-filter__refine-checkbox" for="documentation-data-sheets-3">
+            <input id="documentation-data-sheets-3" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">Data Sheets 3</span>
+          </label>
+          <label class="n-form__checkbox n-search-filter__refine-checkbox" for="documentation-data-sheets-4">
+            <input id="documentation-data-sheets-4" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">Data Sheets 4</span>
+          </label>
+        </div>
+        <a href="#" class="n-search-filter__panel-close-link">Hide Filters
+          <svg class="n-icon-close n-search-filter__panel-close-icon" aria-labelledby="title">
+            <title>close</title>
+            <use xlink:href="../svg/sprite.svg#close"></use>
+          </svg>
+        </a>
+      </div>
+      <div id="n-search-filter-panel--partners" class="n-search-filter__panel ">
+        <div class="n-form__checkbox-group n-form__checkbox-group--horizontal">
+          <label class="n-form__checkbox n-search-filter__refine-checkbox" for="partners-test">
+            <input id="partners-test" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">Test</span>
+          </label>
+        </div>
+        <a href="#" class="n-search-filter__panel-close-link">Hide Filters
+          <svg class="n-icon-close n-search-filter__panel-close-icon" aria-labelledby="title">
+            <title>close</title>
+            <use xlink:href="../svg/sprite.svg#close"></use>
+          </svg>
+        </a>
+      </div>
+      <div id="n-search-filter-panel--customer-stories" class="n-search-filter__panel ">
+        <div class="n-form__checkbox-group n-form__checkbox-group--horizontal">
+          <label class="n-form__checkbox n-search-filter__refine-checkbox" for="customer-stories-test-2-reports">
+            <input id="customer-stories-test-2-reports" name="" type="checkbox" class="n-form__checkbox-input" value="false" />
+            <span class="n-form__checkbox-visual">
+              <svg class="n-icon-check n-form__checkbox-checked-icon" aria-labelledby="title">
+                <title>check</title>
+                <use xlink:href="../svg/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <span class="n-form__checkbox-text ">Test 2 Reports</span>
+          </label>
+        </div>
+        <a href="#" class="n-search-filter__panel-close-link">Hide Filters
+          <svg class="n-icon-close n-search-filter__panel-close-icon" aria-labelledby="title">
+            <title>close</title>
+            <use xlink:href="../svg/sprite.svg#close"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

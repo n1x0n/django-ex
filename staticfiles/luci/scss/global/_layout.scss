@@ -1,0 +1,105 @@
+html,
+body {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// scss-lint:disable TrailingSemicolon
+$susy: (
+  container: $screen-xl,
+  columns: 12,
+  gutter-position: split,
+  // debug: (
+  //     image: show,
+  //     color: rgba($color-blue-light, .25),
+  //     output: overlay,
+  //     toggle: top right
+  //   )
+);
+
+$semantic-layout-sm: layout(4 after);
+$semantic-layout-md: layout(8 after);
+$semantic-layout-lg: layout(12 after);
+
+// Container for Site Content below the page header when there are no tabs
+// .n-site-content {
+//   margin-top: $spacing-xl;
+// } 
+
+// Page Content separation from header & footer
+.n-main-content {
+  display: block;
+  padding-bottom: $spacing-default;
+  padding-top: $spacing-component-bottom;
+}
+
+.n-main-content--no-bottom-padding {
+  padding-bottom: 0;
+}
+
+.n-main-content--no-top-padding {
+  padding-top: 0;
+}
+
+@media screen and (min-width: $screen-md) {
+  .n-main-content {
+    padding-top: 48px;
+  }
+
+  .n-main-content--no-top-padding {
+    padding-top: 0;
+  }
+}
+
+// Container
+.n-container {
+  @include container();
+  padding: 0 $spacing-sm;
+}
+
+// Row
+.n-row {
+  @include clearfix;
+  margin: 0;
+}
+
+@media screen and (min-width: $screen-sm) {
+  @for $i from 1 through 12 {
+    .n-col-sm-#{$i} {
+      @include span($i);
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  @for $i from 1 through 12 {
+    .n-col-md-#{$i} {
+      @include span($i);
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  @for $i from 1 through 12 {
+    .n-col-lg-#{$i} {
+      @include span($i);
+    }
+  }
+
+  .n-row {
+    margin: 0 gutter() * -1;
+  }
+}
+
+@media screen and (min-width: $screen-xl) {
+  @for $i from 1 through 12 {
+    .n-col-xl-#{$i} {
+      @include span($i);
+    }
+  }
+}

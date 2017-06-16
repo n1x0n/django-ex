@@ -1,0 +1,40 @@
+.n-rich-text-editor__heading {
+  margin-top: $spacing-xs;
+}
+
+.n-rich-text-editor__subject-bg {
+  padding: 2% 0;
+}
+
+.n-rich-text-editor__subject-heading,
+.n-rich-text-editor__body {
+  color: $color-blue-dark;
+  font-weight: 700;
+  margin: 1% 0;
+  text-transform: uppercase;
+}
+
+.n-rich-text-editor__subject {
+  display: inline;  
+}
+
+.n-rich-text-editor__body {
+  display: block;
+  margin-left: 2%;
+}
+
+.n-rich-text-editor__subject-field {
+  display: block;
+  font-size: $font-size-sm;
+  margin-top: $spacing-xs;
+  min-height: 30px;
+  width: 100%;
+}
+
+.n-rich-text-editor__button {
+  float: right;
+  margin: $spacing-sm 1%;
+}
+
+
+

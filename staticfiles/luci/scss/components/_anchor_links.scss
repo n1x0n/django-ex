@@ -1,0 +1,68 @@
+$color-anchor-links-background: #666666;
+
+.n-anchor-links {
+  display: none;
+}
+
+.n-anchor-background-neutral-60 {
+  background: $color-anchor-links-background;
+}
+
+.n-anchor-link__list {
+  @include list-reset;
+  text-align: center;
+}
+
+.n-anchor-link__list-item {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: $spacing-sm 0;
+}
+
+.n-anchor-link__link {
+  @include gotham-light;
+  display: block;
+  padding: $spacing-sm;
+  margin-#{$dir-to}: $spacing-xs;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .n-anchor-background-neutral-60 & {
+    color: $color-white;
+  }
+}
+
+.n-anchor-link__icon {
+  height: 14px;
+  vertical-align: middle;
+  width: 14px;
+  margin-#{$dir-from}: $spacing-xs;
+
+  .n-anchor-link__link:hover & {
+    animation: bounceDown 1s;
+    transform-origin: center bottom;
+  }
+
+  .n-anchor-background-neutral-60 & {
+    fill: $color-white;
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .n-anchor-links {
+    display: block;
+  }
+}
+
+@media screen and (max-width: $screen-xl) {
+  .n-anchor-link__list-item {
+
+    &:last-child {
+      margin-#{$dir-to}: 0;
+    }
+  }
+}

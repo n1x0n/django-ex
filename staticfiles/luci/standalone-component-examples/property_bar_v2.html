@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <div class="n-property-bar n-property-bar--v2">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="../svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark n-property-bar__property-mark--has-property-name">
+        <a class="n-property-bar__property-link" href="#">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="../svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg viewBox="0 0 1008 181.537" class="n-property-bar__logo-svg" aria-labelledby="title">
+              <title>NetApp</title>
+              <use xlink:href="../svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+          <h2 class="n-property-bar__property-name">Property Name</h2>
+        </a>
+      </div>
+      <div class="n-property-bar__search">
+        <form class="n-search-form">
+          <input class="n-search-form__input" type="text" placeholder="Search">
+          <button class="n-search-form__button" type="submit">
+            <svg class="n-icon-search n-search-form__button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xlink:href="../svg/sprite.svg#search"></use>
+            </svg>
+            <span class="n-search-form__button-text">Search</span>
+          </button>
+        </form>
+      </div>
+      <div class="n-property-bar__narrow-actions">
+        <ul class="n-property-bar__narrow-actions-list">
+          <li class="n-property-bar__narrow-actions-list-item">
+            <a href="#" class="n-property-bar__narrow-actions-link">
+              <span class="n-property-bar__narrow-actions-link-text">Sign In</span>
+            </a>
+          </li>
+          <li class="n-property-bar__narrow-actions-list-item">
+            <a href="#" class="n-property-bar__narrow-actions-link n-property-bar__narrow-search-toggle">
+              <svg class="n-icon-search n-property-bar__narrow-actions-search-icon" aria-labelledby="title">
+                <title>search</title>
+                <use xlink:href="../svg/sprite.svg#search"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-property-bar__narrow-action-search-form">
+        <form class="n-search-form">
+          <input class="n-search-form__input" type="text" placeholder="Search">
+          <button class="n-search-form__button" type="submit">
+            <svg class="n-icon-search n-search-form__button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xlink:href="../svg/sprite.svg#search"></use>
+            </svg>
+            <span class="n-search-form__button-text">Search</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

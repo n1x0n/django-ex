@@ -1,0 +1,76 @@
+.n-dropdown-menu {
+  display: inline-block;
+  position: relative;
+}
+
+.n-dropdown-menu__trigger {
+  display: inline-block;
+  padding: 0 0 $spacing-sm;
+  position: relative;
+
+  .n-dropdown-menu--active &,
+  .n-dropdown-menu--active &:hover {
+    color: $color-link-hover;
+  }
+}
+
+.n-dropdown-menu__trigger-text {
+  display: inline-block;
+  padding-right: 12px + $spacing-xs;
+
+  .n-dropdown-menu__trigger:hover & {
+    text-decoration: underline;
+  }
+}
+
+.n-dropdown-menu__trigger-icon {
+  display: inline-block;
+  fill: $color-text-light;
+  height: 12px;
+  position: absolute;
+  right: 0;
+  top: 4px;
+  width: 12px;
+
+  .n-dropdown-menu__trigger:hover & {
+    fill: $color-link-hover;
+  }
+
+  .n-dropdown-menu--active &,
+  .n-dropdown-menu--active &:hover {
+    fill: $color-link-hover;
+    transform: rotate(180deg);
+  }
+}
+
+.n-dropdown-menu__menu {
+  background: $color-white;
+  box-shadow: $drop-shadow-even;
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 250px;
+  z-index: z('menu');
+
+  .n-dropdown-menu--align-right & {
+    right: 0;
+  }
+
+  .n-dropdown-menu--active & {
+    display: block;
+  }
+}
+
+.n-dropdown-menu__list {
+  @extend %no-margin;
+  @extend %no-padding;
+  list-style: none;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.n-dropdown-menu__link {
+  color: $color-text-default;
+  display: block;
+  padding: 10px 32px;
+}

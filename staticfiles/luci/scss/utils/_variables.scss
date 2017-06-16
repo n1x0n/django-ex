@@ -1,0 +1,146 @@
+// Typography variables
+$font-size-default: 16px;
+$font-size-xs: 12px;
+$font-size-sm: $font-size-default;
+$font-size-md: $font-size-default;
+$font-size-lg: 20px;
+$font-size-xl: 26px;
+
+$line-height-default: 24px;
+$line-height-sm: $line-height-default;
+$line-height-md: 24px;
+$line-height-lg: 34px;
+
+$font-size-lead: $font-size-default;
+$line-height-lead: 24px;
+
+$font-size-lead-sm: 20px;
+$line-height-lead-sm: $line-height-lead;
+
+$font-size-lead-md: 24px;
+$line-height-lead-md: 32px;
+
+$font-size-h1: 38px;
+$line-height-h1: $font-size-h1;
+
+$font-size-h1-sm: 42px;
+$line-height-h1-sm: $font-size-h1-sm;
+
+$font-size-h1-md: 48px;
+$line-height-h1-md: $font-size-h1-md;
+
+$font-size-h2: 32px;
+$line-height-h2: 38px;
+
+$font-size-h2-sm: 36px;
+$line-height-h2-sm: 42px;
+
+$font-size-h2-md: 40px;
+$line-height-h2-md: 48px;
+
+$font-size-h3: 28px;
+$line-height-h3: 30px;
+
+$font-size-h3-sm: 30px;
+$line-height-h3-sm: 36px;
+
+$font-size-h3-md: 32px;
+$line-height-h3-md: 38px;
+
+$font-size-h4: 24px;
+$line-height-h4: 32px;
+
+$font-size-h4-sm: $font-size-h4;
+$font-size-h4-md: $font-size-h4;
+
+$font-size-h5: 20px;
+$line-height-h5: 24px;
+
+$font-size-h5-sm: $font-size-h5;
+$font-size-h5-md: $font-size-h5;
+
+$font-size-h6: 18px;
+$line-height-h6: 24px;
+
+$font-size-h6-sm: $font-size-h6;
+$font-size-h6-md: $font-size-h6;
+
+$spacing: $line-height-default;
+$spacing-default: $spacing;
+$spacing-component-bottom: $spacing;
+$spacing-xs: round($spacing-default / 4);
+$spacing-sm: round($spacing-default / 2);
+$spacing-lg: round($spacing-default * 2);
+$spacing-xl: round($spacing-default * 4);
+
+$screen-sm:  (420px / $font-size-default) * 1em;
+$screen-md:  (768px / $font-size-default) * 1em;
+$screen-lg:  (1024px / $font-size-default) * 1em;
+$screen-xl:  (1394px / $font-size-default) * 1em;
+
+// NetApp brand colors
+$color-blue:            #0067C5;
+$color-blue-dark:       #002855;
+
+// Neutral colors
+$color-black:           #000000;
+$color-gray-27:         #454545;
+$color-gray-36:         #53565A;
+$color-gray-41:         #686868;
+$color-gray-61:         #929497;
+$color-gray-64:         #A4A4A4;
+$color-gray-87:         #D9D9D6;
+$color-gray-97:         #F7F7F7;
+
+// Accent colors
+$color-blue-lighter:    #8DC8E8;
+$color-blue-light:      #0067C5;
+$color-green:           #007A33;
+$color-purple:          #3C1053;
+$color-orange:          #D76B00;
+
+// The following colors may NOT be unused per new color palette.
+// leaving these here until removed/replaced appropriately.
+$color-gray-52:          #848484;
+$color-gray-67:          #A6A8AB;
+$color-gray-95:          #F2F2F2;
+$color-blue-dark:        #1E4A93;
+$color-blue-mid:         #0067C5;
+$color-blue-faded:       #B6D2F5;
+$color-green-community:  #81BC50;
+$color-yellow:           #EE6023;
+$color-orange-community: #E5452F;
+$color-purple-community: #804C9D;
+$color-red-community:    #E4552F;
+$color-text-default:     $color-gray-27;
+$color-text-light:       $color-gray-41;
+$color-success:          $color-green;
+$color-danger:           #CF2128;
+$color-danger-light:     #FFCCCC;
+$color-link:             $color-blue-light;
+$color-link-hover:       $color-blue-dark;
+$color-white:            #FFFFFF;
+
+$drop-shadow-default: 0 2px 6px rgba($color-black, .3);
+$drop-shadow-even: 0 0 5px rgba($color-black, .3);
+$border-radius-xs: $spacing-xs / 2;
+$border-radius-sm: 6px;
+$border-radius-default: $border-radius-sm;
+
+// Toggle Variables
+$direction: 'ltr' !default;
+$dir-from: left !default;
+$dir-to: right !default;
+
+@if $direction == 'rtl' {
+  $dir-from: right;
+  $dir-to: left;
+}
+
+$z-layers: (
+  "fixed-position-shell": 400,
+  "menu": 200,
+  "off-canvas-content": 10,
+  "off-canvas-menu": 1,
+  "behind": -1
+);

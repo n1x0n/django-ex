@@ -1,0 +1,115 @@
+.n-messaging {
+  @include clearfix;
+  margin-bottom: $spacing-component-bottom;
+  position: relative;
+}
+
+// Elements shared across variations
+
+.n-messaging__message {
+  line-height: 20px;
+  padding-left: 24px;
+
+  .n-messaging--on-dark-bg & {
+    color: $color-white;
+  }
+}
+
+.n-messaging__icon {
+  fill: $color-blue-light;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 16px;
+
+  .n-messaging--on-dark-bg & {
+    fill: $color-white;
+  }
+}
+
+.n-messaging__metadata {
+  color: $color-gray-64;
+  font-size: $font-size-xs;
+  line-height: 12px;
+  margin-top: 0;
+  padding-left: 24px;
+}
+
+// Variation-specific styles
+
+.n-messaging--information__metadata {
+  .n-messaging__message {
+    color: $color-blue-light;
+    margin-bottom: 4px;
+  }
+}
+
+.n-messaging--success {
+  .n-messaging__message {
+    color: $color-green;
+  }
+
+  .n-messaging__icon {
+    fill: $color-green;
+  }
+}
+
+.n-messaging--warning {
+  .n-messaging__icon {
+    fill: $color-orange;
+  }
+}
+
+.n-messaging--error {
+  background-color: $color-danger-light;
+  border: 1px solid $color-danger;
+  padding: 20px;
+
+  .n-messaging__message {
+    color: $color-danger;
+    margin-bottom: 0;
+  }
+
+  .n-messaging__icon {
+    fill: $color-danger;
+    left: 20px;
+    top: 20px;
+  }
+}  
+
+.n-messaging--login {
+  background-color: $color-blue-light;
+  border: 1px solid $color-gray-87;
+  padding: 20px;
+
+  .n-messaging__message {
+    color: $color-white;
+    display: inline-block;
+    float: left;
+    margin-bottom: 0;
+    max-width: 50%;
+  }
+
+  .n-messaging__icon {
+    fill: $color-white;
+    left: 20px;
+    top: 20px;
+  }  
+
+  .button {
+    clear: none;
+    float: right;
+    margin: 1%;
+
+    @media screen and (max-width: $screen-lg) {
+      clear: both;
+      margin: 1%;
+    }    
+
+    @media screen and (max-width: $screen-sm) {
+      float: left;
+      margin-top: 2%;
+    }
+  }  
+}

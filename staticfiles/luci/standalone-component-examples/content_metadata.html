@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <p class="n-content-metadata">
+    <span class="n-rating n-rating--stars-and-count n-content-metadata__rating">
+      <span class="n-rating__stars">
+        <svg class="n-icon-star n-rating__star n-rating__star--active" aria-labelledby="title">
+          <title>star</title>
+          <use xlink:href="../svg/sprite.svg#star"></use>
+        </svg>
+        <svg class="n-icon-star n-rating__star n-rating__star--active" aria-labelledby="title">
+          <title>star</title>
+          <use xlink:href="../svg/sprite.svg#star"></use>
+        </svg>
+        <svg class="n-icon-star n-rating__star n-rating__star--active" aria-labelledby="title">
+          <title>star</title>
+          <use xlink:href="../svg/sprite.svg#star"></use>
+        </svg>
+        <svg class="n-icon-star n-rating__star" aria-labelledby="title">
+          <title>star</title>
+          <use xlink:href="../svg/sprite.svg#star"></use>
+        </svg>
+        <svg class="n-icon-star n-rating__star" aria-labelledby="title">
+          <title>star</title>
+          <use xlink:href="../svg/sprite.svg#star"></use>
+        </svg>
+      </span>
+      <span class="n-rating__count"> 212 Ratings </span>
+    </span>
+    <a href="#" class="n-content-metadata__link">Log in to rate this article</a>
+    <span class="n-content-metadata__text">KB ID: 1012696</span>
+    <span class="n-content-metadata__text">Version: 6.0</span>
+    <span class="n-content-metadata__text">Published date: 09/03/2015</span>
+    <span class="n-content-metadata__text">Views: 2905</span>
+  </p>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

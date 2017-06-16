@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <title>NetApp Library Example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="http://media.netapp.com/designimages/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../bower_components/eightshapes-blocks/dist/esb.min.css">
+  <link rel="stylesheet" href="//cloud.typography.com/6091132/651206/css/fonts.css">
+  <link rel="stylesheet" href="../css/netapp-library.min.css">
+  <script src="../../bower_components/eightshapes-blocks/dist/esb.min.js"></script>
+</head>
+
+<body data-esb-mark-config data-esb-visible-on-load="false">
+  <section class="n-hero n-hero--full-bleed" role="group">
+    <ul class="slides n-hero__slides--full">
+      <li class="n-hero__slides-item n-hero__slides-item--full-bleed" dir="ltr" style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item; background-image: url(../images/smackdown.jpg);">
+        <section class="n-hero__content--full-bleed">
+          <h2 class="n-hero__heading--full-bleed n-hero__heading--full-bleed-dark">NEED MORE SPEED?
+            <br>
+          </h2>
+          <h2 class="n-hero__heading--full-bleed n-hero__heading--full-bleed--second n-hero__heading--full-bleed-dark">Switch to NetApp flash storage and get 3X the performance. Guaranteed.</h2>
+          <a href="/us/campaigns/3xguarantee/index.aspx" target="_self" class="button">GET THE DETAILS</a>
+        </section>
+      </li>
+    </ul>
+  </section>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    jQuery.extend({
+      getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+          return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
+      }
+    });
+    // Change background color via query params for documentation purposes
+    $(document).ready(function() {
+      var example_background_color = $.getQueryParameters()['example-background-color'];
+      if (example_background_color !== undefined) {
+        $("body").css({
+          backgroundColor: '#' + example_background_color
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

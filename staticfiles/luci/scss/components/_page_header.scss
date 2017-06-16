@@ -1,0 +1,128 @@
+h1 {
+  margin-bottom: $spacing-default;
+}
+
+.n-page-header__heading {
+  color: $color-text-default;
+  font-size: $font-size-h3;
+  max-width: 960px;
+
+  &.n-page-header--on-dark-bg {
+    color: $color-white;
+  }
+}
+
+.n-page-header--is-alt-color .n-page-header__heading {
+  color: $color-green;
+}
+
+.n-page-header--v2 .n-page-header__heading {
+  color: $color-blue-light;
+  font-size: $font-size-h2;
+}
+
+.n-page-header__pre-heading {
+  @include gotham-extra-light;
+  color: $color-text-light;
+  display: block;
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-xs;
+  text-transform: uppercase;
+}
+
+.n-page-header--v3 {
+  align-items: flex-start;
+  display: flex;
+  max-width: 1200px;
+}
+
+.n-page-header__img {
+  margin-right: $spacing-default;
+}
+
+.n-page-header__body {
+  flex: 1;
+}
+
+.n-page-header__link--author {
+  @include gotham-book();
+  font-size: $font-size-sm;
+  margin-bottom: $spacing-xs;
+}
+
+.n-page-header__date {
+  @include gotham-light();
+  color: $color-text-light;
+  display: block;
+  margin-bottom: $spacing-xs;
+}
+
+.n-page-header__link--options {
+  display: block;
+  // float: right;
+  font-size: $font-size-sm;
+
+  .n-dropdown-menu__trigger-icon {
+    top: 2px;
+  }
+}
+
+.n-page-header__link-icon {
+  display: inline-block;
+  fill: $color-blue-light;
+  height: 12px;
+  margin-right: $spacing-xs;
+  position: relative;
+  top: 1px;
+  width: 12px;
+}
+
+.n-page-header--v4 {
+  margin-bottom: $spacing-default;
+  padding-top: $spacing-sm;
+  position: relative;
+
+  &:before {
+    background: $color-gray-97;
+    content: '';
+    height: 240px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .n-page-header__heading {
+    color: $color-green;
+    position: relative;
+  }
+}
+
+.n-page-header__inner {
+  margin: 0 auto;
+  max-width: $screen-xl;
+  padding: 0 $spacing-sm;
+}
+
+@media screen and (min-width: $screen-md) {
+  .n-page-header__heading {
+    font-size: $font-size-h1-md;
+
+    .n-page-header--v3 & {
+      font-size: $font-size-h2;
+    }
+  }
+
+  .n-page-header__link--options {
+    display: inline;
+    float: right;
+  }
+
+  .n-page-header__date {
+    display: inline;
+  }
+
+  .n-page-header--v4 {
+    padding-top: $spacing-default;
+  }
+}
