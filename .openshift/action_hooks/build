@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 echo "Downloading NetApp's HTML and CSS Library for User-Centered Interfaces (LUCI)"
 mkdir fredrik
 curl -o fredrik/netapp-library-latest.zip http://luci.netapp.com/build/netapp-library-latest.zip
