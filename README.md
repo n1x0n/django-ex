@@ -1,6 +1,6 @@
 # Openshift quickstart: Django
 
-This is a [Django](http://www.djangoproject.com) project that you can use as the starting point to develop your own and deploy it on an [OpenShift](https://github.com/openshift/origin) cluster.
+This is a [Django](http://www.djangoproject.com) project that you can use as the starting point to develop your own and deploy it on an [OpenShift](https://github.com/openshift/origin) cluster. In this example we use Trident for persistent storage.
 
 The steps in this document assume that you have access to an OpenShift deployment that you can deploy applications on.
 
