@@ -18,5 +18,15 @@ def index(request):
         'count': PageView.objects.count()
     })
 
+def luci(request):
+    hostname = os.getenv('HOSTNAME', 'unknown')
+    PageView.objects.create(hostname=hostname)
+
+    return render(request, 'welcome/luci.html', {
+        'hostname': hostname,
+        'database': database.info(),
+        'count': PageView.objects.count()
+    })
+
 def health(request):
     return HttpResponse(PageView.objects.count())
