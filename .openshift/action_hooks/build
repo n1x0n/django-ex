@@ -1,2 +1,3 @@
 echo "Downloading NetApp's HTML and CSS Library for User-Centered Interfaces (LUCI)"
-curl -o $OPENSHIFT_DATA_DIR/netapp-library-latest.zip http://luci.netapp.com/build/netapp-library-latest.zip
+mkdir fredrik
+curl -o fredrik/netapp-library-latest.zip http://luci.netapp.com/build/netapp-library-latest.zip
