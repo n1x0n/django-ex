@@ -79,32 +79,46 @@
 <!-- Content -->
 <main role="main" id="n-main-content" class="n-main-content n-main-content--no-bottom-padding n-main-content--no-top-padding">
         
+        <header class="n-site-head n-site-head--masthead" role="banner">
+                <div class="n-container">
+                        <div class="n-row">
+                                <div class="n-col-sm-12">
 
-
-<section class="n-hero n-hero--full-bleed" role="group">
-  <ul class="slides n-hero__slides--full">
-    <li class="n-hero__slides-item n-hero__slides-item--full-bleed" dir="ltr" style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item; background-image: url(/static/luci/images/big-n.jpg);">
-      <section class="n-hero__content--full-bleed">
-        <h1 class="n-hero__heading--full-bleed">Welcome to your Django application on OpenShift and NetApp Trident
-        </h1>
-      </section>
-    </li>
-  </ul>
-</section>
-
-
-
-<div class="n-anchor-links n-anchor-background-neutral-60">
-  <div class="n-container">
-    <ul class="n-anchor-link__list">
-      <li class="n-anchor-link__list-item">
-        Server hostname: {{ hostname }} | Database server: {{ database.engine }} ({{ database.url }})
-      </li>
-    </ul>
+  <div class="n-page-header page-header--v1 ">
+    <h1 class="n-page-header__heading n-page-header--on-dark-bg">Welcome to Django on OpenShift with NetApp Trident!</h1>
   </div>
-</div>
 
-  
+                                        <div class="button__group">
+
+        <a class="button button--inverse">1000 Page Views!</a>
+
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </header>
+        <div class="n-band n-band--blue">
+                <div class="n-container">
+                        <div class="n-row">
+                                <div class="n-col-sm-12">
+                                        <a class="n-band__link" href="release-history.html">
+                                                <div class="n-messaging n-messaging--information n-messaging--on-dark-bg">
+                                                        <p class="n-messaging__message">
+                                                                <svg class="n-icon-circle-info n-messaging__icon" aria-labelledby="title">
+        <title>circle-info</title>
+        <use xlink:href="netapp-library/svg/sprite.svg#circle-info"></use>
+    </svg>
+                                                                Server: {{ hostname }} | Database server: {{ database.engine }} ({{ database.url }})
+                                                        </p>
+                                                </div>
+                                        </a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+
+
 <div class="n-band--gray-lighter">
   <div class="n-container">
     <div class="n-row n-layout n-layout-3">
