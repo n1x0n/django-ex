@@ -1,1 +1,7 @@
-body img { display: none }
+.slides.n-hero__slides--full {
+    display: none;
+}
+
+.n-property-bar.n-property-bar--v1 {
+    display: none;
+}
