@@ -1,12 +1,8 @@
-.slides.n-hero__slides--full {
-    display: none;
-}
-
 .n-property-bar.n-property-bar--v1 {
     display: none;
 }
 
-#amazing {
+.blink {
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
@@ -20,3 +16,4 @@
     visibility: hidden;
   }
 }
+
